@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="js/plugins/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Московский государственный строительный университет</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/light.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">
+    <!-- Plugin JS -->
+</head>
+<body>
+<div class="all">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-inner-container">
+                    <div class="header-logo">
+                        <div class="header-logo-img">
+                            <img src="img/logo.svg" alt="МГСУ">
+                        </div>
+                    </div>
+                    <div class="header-menu">
+                        <nav class="menu">
+                            <ul>
+                                <li class="btn btn-transparent active"><span class="check-all-icon active"></span>Голосования</li>
+                                <li class="btn btn-transparent"><span class="users-icon"></span> Диссертационные советы</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-datetime">
+                    <span>Сегодня:</span>24 июля 2023 г.
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-title">
+                <div class="title">
+                    <span class="check-all-icon big"></span>
+                    <h1>Голосования</h1>
+                </div>
+                <div class="log-out">
+                    <span>Выйти</span>
+                    <a href=# class="btn btn-transparent"><span class="exit-icon"></span></a>
+                </div>
+            </div>
+            <div class="main-inner-filter">
+                <div class="filter">
+                    <div class="filter-inner">
+                        <span class="filter-icon"></span>
+                        ФИЛЬТР
+                    </div>
+                    <div class="filter-count">
+                            Найдено: 0
+                    </div>
+                </div>
+                <div class="btns">
+                    <a href="#" class="btn btn-transparent-border"><span class="plus-icon"></span> Создать голосование</a>
+                </div>
+                <div class="form-filter">
+                    <form class="form">
+                        <div class="text-field date">
+<!--                                <label class="text-field__label" for="date">Дата</label>-->
+                            <input class="text-field__input" onfocusin="this.type='date'; this.readonly = 'false'" onfocusout="this.type='text';  this.readonly='true'" type="text" name="date" id="date" placeholder="Дата" value="">
+                            <span class="calendar-icon"></span>
+                        </div>
+                        <div class="text-field fio">
+<!--                                <label class="text-field__label" for="fio">Ф.И.О. соискателя</label>-->
+                            <input class="text-field__input" type="text" name="fio" id="fio" placeholder="Ф.И.О. соискателя" value="">
+                        </div>
+                        <div class="text-field status">
+                            <div class="select-wrap">
+                                <select class="js-select" data-placeholder="Статус" name="state">
+                                    <option></option>
+                                    <option value="item1">zX3qx34T</option>
+                                    <option value="item2">item 2</option>
+                                    <option value="item3">item 3</option>
+                                    <option value="item4">item 4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="text-field single">
+                            <div class="select-wrap">
+                                <select class="js-select" data-placeholder="Диссертационный совет" name="state">
+                                    <option></option>
+                                    <option value="item1">zX3qx34T</option>
+                                    <option value="item2">item 2</option>
+                                    <option value="item3">item 3</option>
+                                    <option value="item4">item 4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="text-field theme">
+                            <input class="text-field__input" type="text" name="theme" id="theme" placeholder="Тема" value="">
+                        </div>
+                        <div class="sub">
+                            <div class="sub-res">
+                                <button type="submit" id="subid" class="btn"><span class="search-icon"></span></button>
+                                <div class="sub-count">Найдено: 24</div>
+                            </div>
+                            <div class="sub-reset">
+                                <span>Сброс</span>
+                                <button type="submit" class="btn btn-transparent"><span class="trash-icon"></span></button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="close-filter">
+                        <a href="#" class="close-icon"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-list">
+                <div class="title-list">
+                    <div class=""> </div>
+                    <div class="">ФИО соискателя</div>
+                    <div class=""><a href="#" class="date-link">Дата <span class="arrow-top-icon"></span></a></div>
+                    <div class="">Тема</div>
+                    <div class="">Статус</div>
+                    <div class="">Дис. совет</div>
+                    <div class="">Результаты <span class="green">за</span> / <span class="red">против</span></div>
+                </div>
+                <div class="list-accordion">
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class=""><span class="add-plus-circle-icon"></span></div>
+                            <div class=""><a class="link" href="#">Щербатюк Андрей Петрович</a></div>
+                            <div class=""><span>17.05.2023</span></div>
+                            <div class="">Методологические основы атмоэкодиагностики урбанизированных геосистем межгорных котловин (на примере Забайкалья)</div>
+                            <div class="">Планируемое</div>
+                            <div class="">24.2.339.05</div>
+                            <div class=""><span class="green">0</span> / <span class="red">0</span></div>
+                        </div>
+                        <div class="panel">
+                            <div class="title-panel">
+                                <div class="empty"></div>
+                                <div class="science">Научная специальность: </div>
+                                <div class="stepen">Соискание ученой степени</div>
+                                <div class="dissert">Защита диссертации:</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty"></div>
+                                <div class="science">2.1.9. Строительная механика.</div>
+                                <div class="stepen">кандидата технических наук</div>
+                                <div class="dissert">13 сентября 2023 года в 15:00 (Зал Ученого совета)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class=""><span class="add-plus-circle-icon"></span></div>
+                            <div class=""><a class="link" href="#">Сумеркин Юрий Алексеевич</a></div>
+                            <div class=""><span>17.05.2023</span></div>
+                            <div class="">Моделирование тепловой нагрузки на территории городского двора в условиях плотной застройки</div>
+                            <div class="">Планируемое</div>
+                            <div class="">24.2.339.05</div>
+                            <div class=""><span class="green">0</span> / <span class="red">0</span></div>
+                        </div>
+                        <div class="panel">
+                            <div class="title-panel">
+                                <div class="empty"></div>
+                                <div class="science">Научная специальность: </div>
+                                <div class="stepen">Соискание ученой степени</div>
+                                <div class="dissert">Защита диссертации:</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty"></div>
+                                <div class="science">2.1.9. Строительная механика.</div>
+                                <div class="stepen">кандидата технических наук</div>
+                                <div class="dissert">13 сентября 2023 года в 15:00 (Зал Ученого совета)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class=""><span class="add-plus-circle-icon"></span></div>
+                            <div class=""><a class="link" href="#">Власов Даниил Александрович</a></div>
+                            <div class=""><span>25.04.2023</span></div>
+                            <div class="">Обоснование метода расчета несущей способности буронабивных свай в скальных грунтах с учетом их взаимодействия с породным массивом</div>
+                            <div class="">Идет голосование</div>
+                            <div class="">24.2.339.05</div>
+                            <div class=""><span class="green">4</span> / <span class="red">0</span></div>
+                        </div>
+                        <div class="panel">
+                            <div class="title-panel">
+                                <div class="empty"></div>
+                                <div class="science">Научная специальность: </div>
+                                <div class="stepen">Соискание ученой степени</div>
+                                <div class="dissert">Защита диссертации:</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty"></div>
+                                <div class="science">2.1.9. Строительная механика.</div>
+                                <div class="stepen">кандидата технических наук</div>
+                                <div class="dissert">13 сентября 2023 года в 15:00 (Зал Ученого совета)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class=""><span class="add-plus-circle-icon"></span></div>
+                            <div class=""><a class="link" href="#">Савенков Антон Юрьевич</a></div>
+                            <div class=""><span>17.05.2023</span></div>
+                            <div class="">Расчет подземных железобетонных сооружений на аварийные воздействия в нелинейной динамической постановке</div>
+                            <div class="">Завершенное</div>
+                            <div class="">24.2.339.05</div>
+                            <div class=""><span class="green">9</span> / <span class="red">1</span></div>
+                        </div>
+                        <div class="panel">
+                            <div class="title-panel">
+                                <div class="empty"></div>
+                                <div class="science">Научная специальность: </div>
+                                <div class="stepen">Соискание ученой степени</div>
+                                <div class="dissert">Защита диссертации:</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty"></div>
+                                <div class="science">2.1.9. Строительная механика.</div>
+                                <div class="stepen">кандидата технических наук</div>
+                                <div class="dissert">13 сентября 2023 года в 15:00 (Зал Ученого совета)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class=""><span class="add-plus-circle-icon"></span></div>
+                            <div class=""><a class="link" href="#">Воловик Михаил Валентинович</a></div>
+                            <div class=""><span>24.04.2023</span></div>
+                            <div class="">Формирование конкурентоспособности строительных предприятий жилищного профиля в условиях саморегулирования</div>
+                            <div class="">Завершенное</div>
+                            <div class="">24.2.339.05</div>
+                            <div class=""><span class="green">20</span> / <span class="red">0</span></div>
+                        </div>
+                        <div class="panel">
+                            <div class="title-panel">
+                                <div class="empty"></div>
+                                <div class="science">Научная специальность: </div>
+                                <div class="stepen">Соискание ученой степени</div>
+                                <div class="dissert">Защита диссертации:</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty"></div>
+                                <div class="science">2.1.9. Строительная механика.</div>
+                                <div class="stepen">кандидата технических наук</div>
+                                <div class="dissert">13 сентября 2023 года в 15:00 (Зал Ученого совета)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class=""><span class="add-plus-circle-icon"></span></div>
+                            <div class=""><a class="link" href="#">Глинянова Ирина Юрьевна</a></div>
+                            <div class=""><span>17.05.2023</span></div>
+                            <div class="">Экологический мониторинг территорий селитебных зон с использованием показателей аэрозолей</div>
+                            <div class="">Завершенное</div>
+                            <div class="">24.2.339.05</div>
+                            <div class=""><span class="green">6</span> / <span class="red">0</span></div>
+                        </div>
+                        <div class="panel">
+                            <div class="title-panel">
+                                <div class="empty"></div>
+                                <div class="science">Научная специальность: </div>
+                                <div class="stepen">Соискание ученой степени</div>
+                                <div class="dissert">Защита диссертации:</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty"></div>
+                                <div class="science">2.1.9. Строительная механика.</div>
+                                <div class="stepen">кандидата технических наук</div>
+                                <div class="dissert">13 сентября 2023 года в 15:00 (Зал Ученого совета)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class=""><span class="add-plus-circle-icon"></span></div>
+                            <div class=""><a class="link" href="#">Аль-Амри Заед Садик Абрахем</a></div>
+                            <div class=""><span>17.05.2023</span></div>
+                            <div class="">Подготовка питьевой воды из подземных источников и опресненных морских вод</div>
+                            <div class="">Завершенное</div>
+                            <div class="">24.2.339.05</div>
+                            <div class=""><span class="green">10</span> / <span class="red">0</span></div>
+                        </div>
+                        <div class="panel">
+                            <div class="title-panel">
+                                <div class="empty"></div>
+                                <div class="science">Научная специальность: </div>
+                                <div class="stepen">Соискание ученой степени</div>
+                                <div class="dissert">Защита диссертации:</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty"></div>
+                                <div class="science">2.1.9. Строительная механика.</div>
+                                <div class="stepen">кандидата технических наук</div>
+                                <div class="dissert">13 сентября 2023 года в 15:00 (Зал Ученого совета)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class=""><span class="add-plus-circle-icon"></span></div>
+                            <div class=""><a class="link" href="#">Щербатюк Андрей Петрович</a></div>
+                            <div class=""><span>17.05.2023</span></div>
+                            <div class="">Методологические основы атмоэкодиагностики урбанизированных геосистем межгорных котловин (на примере Забайкалья)</div>
+                            <div class="">Планируемое</div>
+                            <div class="">24.2.339.05</div>
+                            <div class=""><span class="green">15</span> / <span class="red">6</span></div>
+                        </div>
+                        <div class="panel">
+                            <div class="title-panel">
+                                <div class="empty"></div>
+                                <div class="science">Научная специальность: </div>
+                                <div class="stepen">Соискание ученой степени</div>
+                                <div class="dissert">Защита диссертации:</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty"></div>
+                                <div class="science">2.1.9. Строительная механика.</div>
+                                <div class="stepen">кандидата технических наук</div>
+                                <div class="dissert">13 сентября 2023 года в 15:00 (Зал Ученого совета)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pager">
+                    <div class="number-page">Номер страницы: <span>5 <a href="#" class="caret-down-md"></a></span></div>
+                    <div class="counter-page">
+                        <div class="count">12 из 48</div>
+                        <div class="counter-switch">
+                            <a href="#" class="chevron-left"></a>
+                            <a href="#" class="chevron-right"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+
+</html>

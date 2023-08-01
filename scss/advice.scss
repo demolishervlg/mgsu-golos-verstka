@@ -1,0 +1,271 @@
+.main {
+  .form-advice{
+    .form{
+      .text-fields{
+        padding: 25px 30px 0 17px;
+        border-bottom: 2px solid $gray-4;
+      }
+
+      .text-field{
+        grid-template-columns: repeat(9, minmax(60px, 112px));
+        display: grid;
+        transition: all .25s ease-out;
+        gap: 16px;
+
+        button.btn{
+          color: $primary_color;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+        }
+
+        .input-add-minobr{
+          height: 60px;
+          transition: all .25s ease-out;
+          &.hidden {
+            height: 0;
+            border: unset;
+            padding: 0;
+            opacity: 0;
+          }
+        }
+
+
+        .btn{
+          margin-bottom: 48px;
+        }
+
+        &__label{
+          grid-column: span 3;
+          color: $gray-1;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          display: flex;
+          flex-direction: row;
+          gap: 33px;
+          height: 60px;
+          align-items: center;
+        }
+
+
+        .num-adv {
+          grid-column: span 4;
+        }
+
+        .minobr {
+          grid-column: span 4;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .select-wrap {
+          .select{
+            height: 60px;
+            transition: all .25s ease-out;
+            border: unset;
+            &.hidden {
+              transition: all .25s ease-out;
+              height: 0;
+              border: unset;
+              padding: 0;
+              opacity: 0;
+            }
+          }
+
+          grid-column: span 6;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+      }
+
+      .sovet{
+        border-bottom: 2px solid $gray-4;
+        &-fields{
+          display: flex;
+          flex-direction: column;
+        }
+
+        .titles-sovet-fields{
+          height: 72px;
+          grid-template-columns: repeat(9, minmax(60px, 112px));
+          display: grid;
+          gap: 16px;
+          align-items: center;
+          color: $gray-1;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 140%;
+
+          .name-field{
+            padding-left: 74px;
+            grid-column: span 3;
+          }
+          .select-wrap{
+            padding-left: 9px;
+            grid-column: span 2;
+          }
+          .text-field-edit{
+            padding-right: 66px;
+            text-align: right;
+            grid-column: span 4;
+          }
+        }
+
+        &-field{
+          color: $gray-3;
+          padding: 0 30px 0 17px;
+          grid-template-columns: repeat(9, minmax(60px, 112px));
+          display: grid;
+          gap: 16px;
+          align-items: center;
+          border-top: 1px solid $gray-4;
+          transition: all .25s ease-out;
+          height: 49px;
+
+
+          &.hidden {
+            height: 0;
+            border: unset;
+            padding: 0;
+            opacity: 0;
+          }
+
+          .name-field{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            grid-column: span 3;
+
+            .text-field__input{
+              &:read-only {
+                height: 48px;
+                background-color: #ffffff;
+                border: 1px solid #ffffff;
+              }
+              padding-right: 36px;
+              color: $dark;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              background-color: #ffffff;
+              border: 1px solid #ffffff;
+              transition: all .25s ease-out;
+              border-bottom: 1px solid $primary_color;
+              height: 48px;
+              padding: unset;
+
+            }
+
+            .delete-sovet{
+              display: flex;
+              align-items: center;
+              margin-right: 33px;
+            }
+          }
+
+          .select-wrap{
+            transition: all .25s ease-out;
+            grid-column: span 2;
+
+            .select2-container--default .select2-selection--single {
+              transition: all .25s ease-out;
+              height: 48px;
+              color: $dark;
+              background-color: #ffffff;
+              border: unset;
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__rendered {
+              transition: all .25s ease-out;
+              color: $dark;
+              background-color: #ffffff;
+              border: 1px solid #ffffff;
+              display: flex;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              padding: 6px 6px;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%;
+              border-radius: 4px 4px 0 0;
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__arrow b{
+              top: 50%;
+              right: 5px;
+            }
+
+          }
+
+          .text-field-edit{
+            height: 48px;
+            grid-column: span 4;
+            position: relative;
+
+            .text-field__input{
+              &:read-only {
+                height: 48px;
+                background-color: #ffffff;
+                border: 1px solid #ffffff;
+              }
+              padding-right: 36px;
+              color: $gray-1;
+              text-align: right;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%;
+              background-color: #ffffff;
+              border: 1px solid #ffffff;
+              border-bottom: 1px solid $primary_color;
+              height: 48px;
+            }
+            .btn-edit{
+              position: absolute;
+              top: 12px;
+              right: 0;
+            }
+          }
+        }
+        .btns{
+          border-top: 1px solid $gray-4;
+          padding: 12px 5px;
+          .btn{
+            padding: 5px 15px 5px 7px;
+          }
+        }
+      }
+      button.btn{
+        color: $primary_color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+      }
+      .form-footer{
+        padding: 35px 30px 35px 17px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .text-field{
+          margin-bottom: unset;
+          .text-field__label{
+            grid-column: span 3;
+          }
+          .text-field__input{
+            grid-column: span 6;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,270 @@
+.main {
+  &-inner-search {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(60px, 112px));
+    gap: 16px;
+    grid-template-rows: 60px 1fr;
+    margin-top: 60px;
+    grid-auto-flow: dense;
+    width: 100%;
+
+    .search {
+      grid-column: span 7;
+      grid-row: 1;
+      .text-field {
+        margin-bottom: 1rem;
+        position: relative;
+      }
+      /* стили для label */
+      .text-field__label {
+        display: block;
+        margin-bottom: 0.25rem;
+        transition: all .25s ease-out;
+      }
+      /* стили для input */
+      .text-field__input {
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 37px 12px 72px;
+        margin-right: -8px;
+        transition: all .25s ease-out;
+        position: relative;
+        height: 60px;
+        border: 1px solid $gray-4;
+        background-color: #FFF;
+        box-shadow: 3px 3px 4px 0px rgba(180, 180, 180, 0.07) inset;
+        width: 100%;
+        font-family: inherit;
+        color: $dark;
+        background-clip: padding-box;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 22.4px */
+      }
+
+      .text-field__input::placeholder {
+        color: $gray-3;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        position: relative;
+      }
+
+      .search-btn{
+        position: absolute;
+        width: 26px;
+        height: 24px;
+        top: 18px;
+        left: 17px;
+        z-index: 100;
+        padding: unset;
+        &:hover, &:hover:hover {
+          transition: all .25s ease-out;
+          background-color: transparent;
+        }
+        .search-gray-icon {
+          width: 26px;
+          height: 24px;
+          &:hover{
+            background-image: url("img/Search_Magnifying_Glass_Blue.svg");
+          }
+        }
+      }
+
+
+
+    }
+
+    .btns {
+      grid-row: 1;
+      grid-column: span 3;
+
+      .btn {
+        height: 100%;
+        gap: 12px;
+        width: 100%;
+        line-height: unset;
+        justify-content: center;
+        transition: all .25s ease-out;
+        border: 2px solid $primary_color;
+
+        &:hover, &:hover:hover {
+          transition: all .25s ease-out;
+
+          .plus-icon {
+            background-image: url("img/Add_Plus.svg");
+          }
+        }
+      }
+    }
+  }
+
+  &-list-advice{
+    margin-top: 24px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.05);
+
+    .red{
+      color: $green-1;
+    }
+    .green{
+      color: $negative;
+    }
+
+    .title-list{
+      display: grid;
+      align-items: center;
+      grid-template-columns: minmax(10px,24px) minmax(150px,265px) minmax(50px,155px) minmax(400px,540px);
+      gap: 40px;
+      color: $gray-2;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      padding: 0 17px 0 15px;
+      height: 72px;
+      border-bottom: 1px solid $gray-4;
+
+      .code{
+        &-link{
+          color: $dark;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 15px;
+        }
+
+      }
+
+    }
+
+    .list-accordion{
+      .accordion-item{
+        .accordion {
+          color: $gray-1;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          text-align: left;
+          outline: none;
+
+          display: grid;
+          grid-template-columns: minmax(10px,24px) minmax(150px,276px) minmax(50px,158px) minmax(400px,540px);
+          gap: 40px;
+          align-items: center;
+          width: 100%;
+
+          background-color: #ffffff;
+          border-top: 1px solid #ffffff;
+          border-bottom: 1px solid $gray-4;
+          border-left: unset;
+          border-right: unset;
+
+          padding: 13px 17px 13px 15px;
+
+          cursor: pointer;
+          transition: 0.4s;
+
+          .code{
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 18px;
+          }
+
+          .link{
+            color: $primary_color;
+            &:hover{
+              color: $secondary;
+              text-decoration-line: underline;
+            }
+          }
+
+        }
+
+        .accordion:hover {
+          border-top: 1px solid $secondary;
+          border-bottom: 1px solid $secondary;
+          background-color: $background_blue;
+
+          .link{
+            color: $secondary;
+            &:hover{
+              color: $secondary;
+              text-decoration-line: underline;
+            }
+          }
+        }
+
+        .active:hover{
+          background-color: #FAFBFC;
+          border-bottom: 1px solid #FAFBFC;
+        }
+
+        .active{
+          border-bottom: 1px solid #FAFBFC;
+          background-color: #FAFBFC;
+          border-top: 1px solid $secondary;
+          .add-plus-circle-icon{
+            background-image: url("/img/Remove_Minus_Circle.svg");
+            &:hover{
+              background-image: url("/img/Remove_Minus_Circle_Secondary.svg");
+            }
+          }
+        }
+
+        .panel {
+          background-color: white;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          padding: 0 17px 0 15px;
+
+          .value-panel{
+            border-top: 1px solid $gray-4;
+            display: grid;
+            grid-template-columns: minmax(10px,24px) minmax(150px,276px) minmax(50px,158px) minmax(400px,540px);
+            gap: 40px;
+            align-items: center;
+            color: $gray-1;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            padding: 12px 0;
+
+            &:hover{
+              background-color: $hover-background_gray;
+            }
+
+            .empty{
+              text-align: center;
+            }
+
+            .dissert{
+              text-align: right;
+              padding-right: 50px;
+            }
+
+          }
+        }
+
+        .active ~ .panel {
+          border-bottom: 1px solid $secondary;
+          background-color: #FAFBFC;
+        }
+      }
+    }
+  }
+}

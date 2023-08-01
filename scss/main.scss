@@ -1,0 +1,208 @@
+.main {
+  grid-column: span 9;
+  background-color: $background_gray;
+  height: 100%;
+  margin-bottom: 41px;
+
+  &-title{
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+
+    .title{
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      h1{
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 120%; /* 48px */
+        text-transform: uppercase;
+      }
+    }
+    .log-out{
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      color: $gray-2;
+      text-align: right;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      transition: all .25s ease-out;
+
+      .btn{
+        background-color: #ffffff;
+        padding: 18px;
+      }
+
+      &:hover{
+        color: $gray-1;
+        transition: all .25s ease-out;
+        .btn{
+          background-color: $primary_color;
+          .exit-icon{
+            background-image: url("img/Exit_Blue.svg");
+          }
+        }
+      }
+    }
+  }
+
+  &-breadcrumbs-vote,&-breadcrumbs-advice, {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    .back-btn{
+      display: flex;
+      gap: 19px;
+      align-items: center;
+      .btn{
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.05);
+        height: 60px;
+        padding: 18px 15px;
+        &:hover{
+          background-color: $primary_color;
+          .arrow-right-md-icon{
+            background-image: url("img/Arrow_Right_MD-white.svg");
+          }
+        }
+      }
+      p{
+        color: $gray-2;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 25.2px */
+        text-transform: uppercase;
+        padding: unset;
+      }
+    }
+    .status-vote{
+      display: flex;
+      gap: 19px;
+      align-items: center;
+      color: $gray-2;
+      text-align: right;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      transition: all .25s ease-out;
+
+      .blink {
+        animation-name: blinker;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+        animation-duration: 0.5s;
+        -webkit-animation-name: blinker;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+        -webkit-animation-duration: 0.5s;
+      }
+
+      @keyframes blinker {
+        from { opacity: 1.0; }
+        to { opacity: 0.0; }
+      }
+
+      @-webkit-keyframes blinker {
+        from { opacity: 1.0; }
+        to { opacity: 0.0; }
+      }
+
+    }
+
+    .btns {
+      .btn {
+        height: 100%;
+        gap: 12px;
+        width: 100%;
+        line-height: unset;
+        justify-content: center;
+        transition: all .25s ease-out;
+        border: 2px solid $primary_color;
+        max-width: 281px;
+        padding: 12px 49px;
+
+        &:hover, &:hover:hover {
+          transition: all .25s ease-out;
+
+          .plus-icon {
+            background-image: url("img/Add_Plus.svg");
+          }
+        }
+
+        &.disabled, &:disabled {
+          .plus-icon {
+            background-image: url("img/Add_Plus_Gray-3.svg");
+          }
+        }
+      }
+    }
+
+  }
+
+  .pager{
+    padding: 25px 19px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: right;
+    gap: 102px;
+    align-items: center;
+
+    .number-page{
+      color: $gray-1;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      span{
+        margin-left: 15px;
+        color: $gray-1;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .counter-page{
+      display: flex;
+      flex-direction: row;
+      gap: 76px;
+      align-items: center;
+
+      color: $gray-1;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+
+      .counter-switch{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 21px;
+      }
+    }
+  }
+
+}

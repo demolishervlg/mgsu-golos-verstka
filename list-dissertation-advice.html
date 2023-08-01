@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="js/plugins/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Список дисертационных советов</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+</head>
+<body>
+<div class="all">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-inner-container">
+                    <div class="header-logo">
+                        <div class="header-logo-img">
+                            <img src="img/logo.svg" alt="МГСУ">
+                        </div>
+                    </div>
+                    <div class="header-menu">
+                        <nav class="menu">
+                            <ul>
+                                <li class="btn btn-transparent "><span class="check-all-icon "></span>Голосования</li>
+                                <li class="btn btn-transparent active"><span class="users-icon active"></span> Диссертационные советы</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-datetime">
+                    <span>Сегодня:</span>24 июля 2023 г.
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-title">
+                <div class="title">
+                    <span class="users-gray-icon big"></span>
+                    <h1>Диссертационные советы</h1>
+                </div>
+                <div class="log-out">
+                    <span>Выйти</span>
+                    <a href=# class="btn btn-transparent"><span class="exit-icon"></span></a>
+                </div>
+            </div>
+            <div class="main-inner-search">
+                <form class="search">
+                    <div class="text-field">
+                        <button class="btn btn-transparent search-btn"><span class="search-gray-icon"></span></button>
+                        <input class="text-field__input theme" type="text" name="search" id="search" placeholder="Поиск" value="">
+                    </div>
+                </form>
+                <div class="btns">
+                    <a href="#" class="btn btn-transparent-border"><span class="plus-icon"></span> Создать совет</a>
+                </div>
+            </div>
+            <div class="main-list-advice">
+                <div class="title-list">
+                    <div class="empty"> </div>
+                    <div class="code"><a href="#" class="code-link">Код <span class="arrow-top-icon"></span></a></div>
+                    <div class="order-number">№ приказа</div>
+                    <div class="specialties">Специальности</div>
+                </div>
+                <div class="list-accordion">
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class="empty"><span class="add-plus-circle-icon"></span></div>
+                            <div class="code"><a class="link" href="#">24.2.339.01 (Д 212.138.02)</a> <span class="copy-icon"></span></div>
+                            <div class="order-number">Приказ № 105/нк от 11 апреля 2012 г.</div>
+                            <div class="specialties">
+                                2.1.3. Теплоснабжение, вентиляция, кондиционирование воздуха, газоснабжение и освещение (технические науки) ;
+                                2.1.4. Водоснабжение, канализация, строительные системы охраны водных ресурсов (технические науки)
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="value-panel">
+                                <div class="empty">1</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">2</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">3</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">4</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">5</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">6</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">7</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">8</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">9</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">10</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">11</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">12</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">13</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">14</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">15</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">16</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class="empty"><span class="add-plus-circle-icon"></span></div>
+                            <div class="code"><a class="link" href="#">24.2.339.01 (Д 212.138.02)</a> <span class="copy-icon"></span></div>
+                            <div class="order-number">Приказ № 105/нк от 11 апреля 2012 г.</div>
+                            <div class="specialties">
+                                2.1.3. Теплоснабжение, вентиляция, кондиционирование воздуха, газоснабжение и освещение (технические науки) ;
+                                2.1.4. Водоснабжение, канализация, строительные системы охраны водных ресурсов (технические науки)
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="value-panel">
+                                <div class="empty">1</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">2</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">3</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">4</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">5</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">6</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">7</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">8</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">9</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">10</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">11</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">12</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">13</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">14</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">15</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">16</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class="empty"><span class="add-plus-circle-icon"></span></div>
+                            <div class="code"><a class="link" href="#">24.2.339.01 (Д 212.138.02)</a> <span class="copy-icon"></span></div>
+                            <div class="order-number">Приказ № 105/нк от 11 апреля 2012 г.</div>
+                            <div class="specialties">
+                                2.1.3. Теплоснабжение, вентиляция, кондиционирование воздуха, газоснабжение и освещение (технические науки) ;
+                                2.1.4. Водоснабжение, канализация, строительные системы охраны водных ресурсов (технические науки)
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="value-panel">
+                                <div class="empty">1</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">2</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">3</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">4</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">5</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">6</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">7</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">8</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">9</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">10</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">11</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">12</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">13</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">14</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">15</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">16</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class="empty"><span class="add-plus-circle-icon"></span></div>
+                            <div class="code"><a class="link" href="#">24.2.339.01 (Д 212.138.02)</a> <span class="copy-icon"></span></div>
+                            <div class="order-number">Приказ № 105/нк от 11 апреля 2012 г.</div>
+                            <div class="specialties">
+                                2.1.3. Теплоснабжение, вентиляция, кондиционирование воздуха, газоснабжение и освещение (технические науки) ;
+                                2.1.4. Водоснабжение, канализация, строительные системы охраны водных ресурсов (технические науки)
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="value-panel">
+                                <div class="empty">1</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">2</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">3</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">4</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">5</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">6</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">7</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">8</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">9</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">10</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">11</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">12</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">13</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">14</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">15</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">16</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion">
+                            <div class="empty"><span class="add-plus-circle-icon"></span></div>
+                            <div class="code"><a class="link" href="#">24.2.339.01 (Д 212.138.02)</a> <span class="copy-icon"></span></div>
+                            <div class="order-number">Приказ № 105/нк от 11 апреля 2012 г.</div>
+                            <div class="specialties">
+                                2.1.3. Теплоснабжение, вентиляция, кондиционирование воздуха, газоснабжение и освещение (технические науки) ;
+                                2.1.4. Водоснабжение, канализация, строительные системы охраны водных ресурсов (технические науки)
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="value-panel">
+                                <div class="empty">1</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">2</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">3</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">4</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">5</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">6</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">7</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">8</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">9</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">10</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">11</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">12</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">13</div>
+                                <div class="science">Зерцалов Михаил Григорьевич</div>
+                                <div class="stepen">председатель</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">14</div>
+                                <div class="science">Мондрус Владимир Львович</div>
+                                <div class="stepen">зам. председателя</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">15</div>
+                                <div class="science">Тер-Мартиросян Армен Завенович</div>
+                                <div class="stepen">учёный секретарь</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                            <div class="value-panel">
+                                <div class="empty">16</div>
+                                <div class="science">Сидоров Виталий Валентинович</div>
+                                <div class="stepen">член совета</div>
+                                <div class="dissert">lefubileukoi-1231@yopmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pager">
+                    <div class="number-page">Номер страницы: <span>5 <a href="#" class="caret-down-md"></a></span></div>
+                    <div class="counter-page">
+                        <div class="count">12 из 48</div>
+                        <div class="counter-switch">
+                            <a href="#" class="chevron-left"></a>
+                            <a href="#" class="chevron-right"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>

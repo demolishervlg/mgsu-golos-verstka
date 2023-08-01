@@ -1,0 +1,538 @@
+
+.check-all-icon{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-image: url("/img/Vector_blue.svg");
+  transition: all .25s ease-out;
+  &.active, &:active {
+    transition: all .25s ease-out;
+    background-image: url("/img/Vector.svg");
+  }
+
+  &.big{
+    transition: all .25s ease-out;
+    width: 36px;
+    height: 36px;
+    background-image: url("/img/Check_All_Big.svg");
+  }
+}
+
+.users-icon{
+  display: inline-block;
+  background-image: url("/img/Users_blue.svg");
+  width: 32px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &.active, &:active {
+    transition: all .25s ease-out;
+    background-image: url("/img/Users.svg");
+  }
+}
+
+.plus-icon{
+  display: inline-block;
+  background-image: url("/img/Add_Plus_Blue.svg");
+  width: 32px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &.active, &:active {
+    transition: all .25s ease-out;
+    background-image: url("/img/Add_Plus.svg");
+  }
+  &.white{
+    background-image: url("/img/Add_Plus.svg");
+  }
+}
+
+.filter-icon{
+  display: inline-block;
+  background-image: url("/img/Filter_Blue.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.close-icon{
+  display: inline-block;
+  background-image: url("/img/Close_LG.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &:hover, &:hover:hover {
+    transition: all .25s ease-out;
+    background-image:  url("/img/Close_LG_Blue.svg");
+  }
+}
+
+.search-icon{
+  display: inline-block;
+  background-image: url("/img/Search_Magnifying_Glass.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.search-gray-icon{
+  display: inline-block;
+  background-image: url("/img/Search_Magnifying_Glass_Gray.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.trash-icon{
+  display: inline-block;
+  background-image: url("/img/Trash_Full_Blue.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+
+  &.white{
+    background-image: url("/img/Trash_Full.svg");
+  }
+}
+
+.calendar-icon{
+  display: inline-block;
+  background-image: url("/img/Calendar_Event.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.add-plus-circle-icon{
+  display: inline-block;
+  background-image: url("/img/Add_Plus_Circle.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &:hover, &:hover:hover {
+    background-image:  url("/img/Add_Plus_Circle_Secondary.svg");
+  }
+}
+
+.chevron-left{
+  display: inline-block;
+  background-image: url("/img/Chevron_Left.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+
+  &:hover, &:hover:hover {
+    background-image:  url("/img/Chevron_Left_Hover.svg");
+  }
+
+  &.active, &:active {
+
+  }
+
+  &.disabled, &:disabled {
+    background-image:  url("/img/Chevron_Left_Disabled.svg");
+  }
+
+}
+
+.chevron-right{
+  display: inline-block;
+  background-image: url("/img/Chevron_Right.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+
+  &:hover, &:hover:hover {
+    background-image:  url("/img/Chevron_Right_Hover.svg");
+  }
+
+  &.active, &:active {
+
+  }
+
+  &.disabled, &:disabled {
+    background-image:  url("/img/Chevron_Right_Disabled.svg");
+  }
+}
+
+.caret-down-md{
+  display: inline-block;
+  background-image: url("/img/Caret_Down_MD.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+
+  &:hover, &:hover:hover {
+    background-image:  url("/img/Caret_Down_MD_Blue.svg");
+  }
+
+}
+
+.exit-icon{
+  display: inline-block;
+  background-image: url("/img/Exit.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &:hover, &:hover:hover {
+    transition: all .25s ease-out;
+    background-image:  url("/img/Exit.svg");
+  }
+}
+
+.clock-icon{
+  display: inline-block;
+  background-image: url("/img/Clock.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+
+}
+
+.user-icon{
+  display: inline-block;
+  background-image: url("/img/User_01.png");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+
+}
+
+.study-icon{
+  display: inline-block;
+  background-image: url("/img/study.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+
+}
+
+.book-icon{
+  display: inline-block;
+  background-image: url("/img/Book.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.qr-icon{
+  display: inline-block;
+  background-image: url("/img/Qr_Code.svg");
+  width: 26px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.users-gray-icon{
+  display: inline-block;
+  background-image: url("/img/Users_gray.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &.big{
+    background-image: url("/img/Users_Big.svg");
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.calendar-gray-icon{
+  display: inline-block;
+  background-image: url("/img/Calendar_gray.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.copy-icon{
+  display: inline-block;
+  background-image: url("/img/Copy.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &:hover, &:hover:hover {
+    transition: all .25s ease-out;
+    background-image:  url("/img/Copy-blue-Secondary.svg");
+  }
+}
+
+.edit-pencil-line-icon{
+  display: inline-block;
+  background-image: url("/img/Edit_Pencil_Line_02.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &:hover, &:hover:hover {
+    transition: all .25s ease-out;
+    background-image:  url("/img/Edit_Pencil_Line_02_Hover.png");
+  }
+}
+
+.paper-plane-icon{
+  display: inline-block;
+  background-image: url("/img/Paper_Plane.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.check-big-icon{
+  display: inline-block;
+  background-image: url("/img/Check_Big.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.link-icon{
+  display: inline-block;
+  background-image: url("/img/Link.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.arrow-right-md-icon{
+  display: inline-block;
+  background-image: url("/img/Arrow_Right_MD.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.ellipse-positive-icon{
+  display: inline-block;
+  background-image: url("/img/Ellipse-positive.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.ellipse-progress-icon{
+  display: inline-block;
+  background-image: url("/img/Ellipse-orange.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.ellipse-completed-icon{
+  display: inline-block;
+  background-image: url("/img/ellipse-completed.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.copy-blue-icon{
+  display: inline-block;
+  background-image: url("/img/Copy-blue.svg");
+  width: 25px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &:hover, &:hover:hover {
+    transition: all .25s ease-out;
+    background-image:  url("/img/Copy-blue-hover.svg");
+  }
+}
+
+.stop-btn-icon{
+  display: inline-block;
+  background-image: url("/img/stop-btn-icon.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.document-pdf-icon{
+  display: inline-block;
+  background-image: url("/img/grommet-icons_document-pdf.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.arrow-reload-icon{
+  display: inline-block;
+  background-image: url("/img/Arrow_Reload.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.green-progress-icon{
+  display: inline-block;
+  background-image: url("/img/chekbox-green-progress.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.negative-progress-icon{
+  display: inline-block;
+  background-image: url("/img/Add_Plus_Square.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.plus-not-border-icon{
+  display: inline-block;
+  background-image: url("/img/Add_Plus_Square_Gray.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &:hover, &:hover:hover {
+    transition: all .25s ease-out;
+    background-image:  url("/img/Add_Plus_Square_Negative.svg");
+  }
+}
+
+.users-group-icon{
+  display: inline-block;
+  background-image: url("/img/Users_Group.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.minobr-icon{
+  display: inline-block;
+  background-image: url("/img/minobr.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.arrow-top-icon{
+  display: inline-block;
+  background-image: url("/img/arrow_top.svg");
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}
+
+.empty-icon{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+}

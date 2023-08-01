@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="js/plugins/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Московский государственный строительный университет</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+</head>
+<body>
+<div class="all">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-inner-container">
+                    <div class="header-logo">
+                        <div class="header-logo-img">
+                            <img src="img/logo.svg" alt="МГСУ">
+                        </div>
+                    </div>
+                    <div class="header-menu">
+                        <nav class="menu">
+                            <ul>
+                                <li class="btn btn-transparent active"><span class="check-all-icon active"></span>Голосования</li>
+                                <li class="btn btn-transparent"><span class="users-icon"></span> Диссертационные советы</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-datetime">
+                    <span>Сегодня:</span>24 июля 2023 г.
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-title">
+                <div class="title">
+                    <span class="users-gray-icon big"></span>
+                    <h1>Диссертационные советы</h1>
+                </div>
+                <div class="log-out">
+                    <span>Выйти</span>
+                    <a href=# class="btn btn-transparent"><span class="exit-icon"></span></a>
+                </div>
+            </div>
+            <div class="main-breadcrumbs-advice">
+                <div class="back-btn">
+                    <a href="" class="btn btn-transparent"><span class="arrow-right-md-icon"></span></a>
+                    <p>Назад к списку</p>
+                </div>
+                <div class="btns">
+                    <a href="#" class="btn btn-transparent-border"><span class="plus-icon"></span> Создать совет</a>
+                </div>
+            </div>
+            <div class="main-form-vote">
+                <div class="title-form-vote">
+                    <div class="name">
+                        24.2.339.05 (Д 212.138.14)
+                    </div>
+                    <div class="date">
+                        Дата создания 12.04.2023
+                    </div>
+                </div>
+               <div class="form-advice">
+                   <form action="" class="form">
+                       <div class="text-fields">
+                           <div class="text-field">
+                               <label class="text-field__label" for="num-adv"><span class="users-group-icon"></span>№ диссертационного совета</label>
+                               <input class="text-field__input num-adv" type="text" name="fio" id="num-adv" placeholder="№ диссертационного совета" value="">
+                           </div>
+                           <div class="text-field">
+                               <label class="text-field__label" for="minobr"><span class="minobr-icon"></span>Приказ Минобрнауки России</label>
+                               <div class="minobr">
+                                   <div class="input-add-minobr" id="add-minobr" data-last-index="0">
+                                       <input  data-last-index="0" class="text-field__input" type="text" name="minobr" id="minobr" placeholder="Приказ Минобрнауки России" value="">
+                                   </div>
+                                   <button type="button" class="btn btn-transparent" onclick="addEl('.input-add-minobr', 'minobr', 'text')"/> <span class="plus-icon"></span> Добавить приказ</button>
+                               </div>
+                           </div>
+                           <div class="text-field">
+                               <label class="text-field__label"><span class="study-icon"></span>Научные специальности</label>
+                               <div class="select-wrap">
+                                   <div class="select" id="select" data-last-index="0">
+                                       <select data-last-index="0" class="js-select addSelStudy" data-placeholder="Научные специальности" id="state" name="state">
+                                           <option></option>
+                                           <option value="item1">Кандидат технических наук</option>
+                                           <option value="item2">item 2</option>
+                                           <option value="item3">item 3</option>
+                                           <option value="item4">item 4</option>
+                                       </select>
+                                   </div>
+                                   <button type="button" class="btn btn-transparent" onclick="addEl('.select', 'state', 'select')"/> <span class="plus-icon"></span> Добавить специальность</button>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="sovet">
+                           <div class="titles-sovet-fields">
+                               <div class="name-field">Состав совета (9):</div>
+                               <div class="select-wrap">Должность в совете</div>
+                               <div class="text-field-edit">Эл. почта</div>
+                           </div>
+                           <div class="sovet-fields">
+                               <div class="sovet-field" data-last-index="0">
+                                   <div class="name-field">
+                                       <a href="#" class="delete-sovet"><span class="plus-not-border-icon"></span></a>
+                                       <input type="text" name="sovetName" class="text-field__input edit" readonly="true" value="Алексеев Евгений Валерьевич"/>
+                                   </div>
+                                   <div class="select-wrap __select">
+                                       <select class="js-select" name="sovetState">
+                                           <option value="item1">председатель</option>
+                                           <option value="item2">зам. председателя</option>
+                                           <option value="item3">ученый секретарь</option>
+                                           <option value="item4">член совета</option>
+                                       </select>
+                                   </div>
+                                   <div class="text-field-edit">
+                                       <input class="text-field__input" type="text" name="sovetEmail" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
+                                       <span class="edit-pencil-line-icon btn-edit"></span>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="btns">
+                               <button type="button" class="btn btn-transparent" onclick="addEl('.sovet-field', '', 'sovet-field')"/> <span class="plus-icon"></span> Добавить участника</button>
+                           </div>
+                       </div>
+                   </form>
+               </div>
+            </div>
+            <div class="footer">
+                <div class="info">
+                    <p><span class="link-icon"></span> Информация о диссертации на сайте:</p>
+                    <a href="" class="link">https://mgsu.ru/science/Dissoveti/Zashita_dissert/53173/</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
