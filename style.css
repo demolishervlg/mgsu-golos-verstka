@@ -360,8 +360,9 @@
       font-style: normal;
       font-weight: 500;
       line-height: 140%; }
+      .main .form-vote .form .sovet-field .checkbox-field .name {
+        margin-left: 33px; }
       .main .form-vote .form .sovet-field .checkbox-field .custom-checkbox + label::before {
-        margin-right: 33px;
         color: #BCBDC0; }
       .main .form-vote .form .sovet-field .checkbox-field .custom-checkbox + label {
         color: #BCBDC0; }
@@ -446,6 +447,7 @@
     height: 24px;
     border: unset;
     background-size: 100%;
+    background-color: #ffffff;
     background-image: url("/img/Remove_Minus.svg"); }
   .main .form-vote .form .sovet.progress .checkbox-field .custom-checkbox:checked + label::before {
     transition: all .15s ease-out;

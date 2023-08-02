@@ -8,43 +8,28 @@
 // });
 
 
-
-
 $(document).ready(function() {
     init();
 })
 
-
 function init() {
     $('.js-select').select2({
-        allowClear: false,
         width: 'style',
         minimumResultsForSearch: -1,
     }).on('select2:open', function(e) {
         $('.select2-dropdown').hide();
         setTimeout(function() {
             jQuery('.select2-dropdown').slideDown(150);
-        });
-    }).on('select2:closing', function(e) {
-        e.preventDefault();
-        setTimeout(function() {
-            $('.select2-dropdown').slideUp(150, function() {
-                close();
-            });
+            const evt = "scroll.select2";
         }, 0);
     });
 }
 
+
 function close() {
-    $(".js-select").select2('destroy');
+    $(".js-select").select2('destroy')
     init();
 }
-
-
-
-
-
-
 
 
 //Раскрытие фильтра
@@ -95,12 +80,20 @@ $(document).on('click', '.copy-icon', function() {
 
 
 // Возможность изменять элемент по кнопке
-$(document).on('click', '.text-field-edit .btn-edit', function() {
-    let elem = $(this).prev(".text-field__input");
-    let ro = elem.prop('readonly');
-    elem.prop('readonly', !ro).focus();
-    $(this).val(ro ? 'Save' : 'Edit');
+$(document).on('click', '.text-field-edit', function(e) {
+    console.log(e.target.className)
+    if(e.target.className === "edit-pencil-line-icon btn-edit"){
+        let elem = $(this).find(".text-field__input");
+        let ro = elem.prop('readonly');
+        elem.prop('readonly', !ro).focus();
+        $(this).val(ro ? 'Save' : 'Edit');
+    }
 })
+$(document).on('blur', '.btn-edit-input', function() {
+    $(this).attr("readonly", true)
+})
+
+
 
 
 // Возможность изменять элемент по клику на поле
@@ -231,7 +224,7 @@ function addEl(el, name, type) {
             "</select>" +
             "</div>" +
             "<div class=\"text-field-edit\">" +
-            "<input class=\"text-field__input\" type=\"text\" name='sovetEmail["+(Number(index)+1)+"]' id=\"sovet\" readonly placeholder=\"эл. почта участника\" value=\"\">" +
+            "<input class=\"text-field__input btn-edit-input\" type=\"text\" name='sovetEmail["+(Number(index)+1)+"]' id=\"sovet\" readonly placeholder=\"эл. почта участника\" value=\"\">" +
             "<span class=\"edit-pencil-line-icon btn-edit\"></span>" +
             "</div>";
 
@@ -254,8 +247,14 @@ function addEl(el, name, type) {
 $( function() {
     $("#date").datepicker({
         dateFormat : "yy-mm-dd",
-        minDate: new Date($('#hiddendelivdate').val()),
         monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
         dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        beforeShow: function () {
+            $(".all").css("overflow", "hidden");
+        },
+        onClose: function () {
+            $(".all").css("overflow", "auto");
+        },
+
     });
 } );

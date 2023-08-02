@@ -158,8 +158,11 @@
             font-style: normal;
             font-weight: 500;
             line-height: 140%;
+
+            .name{
+              margin-left: 33px;
+            }
             .custom-checkbox + label::before{
-              margin-right: 33px;
               color: $gray-3;
             }
             .custom-checkbox + label{
@@ -293,6 +296,7 @@
               height: 24px;
               border: unset;
               background-size: 100%;
+              background-color: #ffffff;
               background-image: url("/img/Remove_Minus.svg");
             }
 
