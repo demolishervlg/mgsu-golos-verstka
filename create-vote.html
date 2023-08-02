@@ -6,12 +6,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script type="text/javascript" src="js/plugins/jquery.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Московский государственный строительный университет</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
 </head>
 <body>
 <div class="all">
@@ -27,7 +25,7 @@
                     <div class="header-menu">
                         <nav class="menu">
                             <ul>
-                                <li class="btn btn-transparent active"><span class="check-all-icon active"></span>Голосования</li>
+                                <li class="btn btn-transparent active inner-page"><span class="check-all-icon active"></span>Голосования</li>
                                 <li class="btn btn-transparent"><span class="users-icon"></span> Диссертационные советы</li>
                             </ul>
                         </nav>
@@ -63,7 +61,10 @@
                         <div class="text-fields">
                             <div class="text-field date">
                                 <label class="text-field__label" for="date"><span class="calendar-gray-icon"></span>Дата защиты диссертации:</label>
-                                <input class="text-field__input date" onfocusin="this.type='date'; this.readonly = 'false'" onfocusout="this.type='text';  this.readonly='true'" type="text" name="date" id="date" placeholder="Дата" value="">
+                                <div class="date-input">
+                                    <input class="text-field__input" type="text" name="date" id="date" placeholder="Дата" value="">
+                                    <span class="calendar-icon"></span>
+                                </div>
                             </div>
                             <div class="text-field">
                                 <label class="text-field__label" for="time-hour"><span class="clock-icon"></span>Время проведения защиты</label>
@@ -119,11 +120,10 @@
                             </div>
                         </div>
 
-                        <div class="sovet">
+                        <div class="sovet create">
                             <div class="titles-sovet-fields">
                                 <div class="checkbox-field">Состав совета (9):</div>
                                 <div class="__select-field">Должность в совете</div>
-                                <div class="text-field-copy">Код участия</div>
                                 <div class="text-field-edit">Эл. почта</div>
                             </div>
                             <div class="sovet-fields">
@@ -139,10 +139,6 @@
                                             <option value="item3">ученый секретарь</option>
                                             <option value="item4">член совета</option>
                                         </select>
-                                    </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="zX3qx34T" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
                                     </div>
                                     <div class="text-field-edit">
                                         <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
@@ -162,10 +158,6 @@
                                             <option value="item4">член совета</option>
                                         </select>
                                     </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="sbW33nh9" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
-                                    </div>
                                     <div class="text-field-edit">
                                         <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
                                         <span class="edit-pencil-line-icon btn-edit"></span>
@@ -183,10 +175,6 @@
                                             <option value="item3" selected>ученый секретарь</option>
                                             <option value="item4">член совета</option>
                                         </select>
-                                    </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="vfSTY804" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
                                     </div>
                                     <div class="text-field-edit">
                                         <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
@@ -206,9 +194,23 @@
                                             <option value="item4" selected>член совета</option>
                                         </select>
                                     </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="vfSTY804" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
+                                    <div class="text-field-edit">
+                                        <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
+                                        <span class="edit-pencil-line-icon btn-edit"></span>
+                                    </div>
+                                </div>
+                                <div class="sovet-field">
+                                    <div class="checkbox-field">
+                                        <input type="checkbox" class="custom-checkbox" id="happy3" checked name="happy3" value="yes">
+                                        <label for="happy3">Гогина Елена Сергеевна</label>
+                                    </div>
+                                    <div class="select-wrap __select position">
+                                        <select class="js-select" name="state">
+                                            <option value="item1">председатель</option>
+                                            <option value="item2">зам. председателя</option>
+                                            <option value="item3">ученый секретарь</option>
+                                            <option value="item4">член совета</option>
+                                        </select>
                                     </div>
                                     <div class="text-field-edit">
                                         <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
@@ -228,9 +230,23 @@
                                             <option value="item4">член совета</option>
                                         </select>
                                     </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="vfSTY804" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
+                                    <div class="text-field-edit">
+                                        <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
+                                        <span class="edit-pencil-line-icon btn-edit"></span>
+                                    </div>
+                                </div>
+                                <div class="sovet-field">
+                                    <div class="checkbox-field">
+                                        <input type="checkbox" class="custom-checkbox" id="happy3" checked name="happy3" value="yes">
+                                        <label for="happy3">Гогина Елена Сергеевна</label>
+                                    </div>
+                                    <div class="select-wrap __select position">
+                                        <select class="js-select" name="state">
+                                            <option value="item1">председатель</option>
+                                            <option value="item2">зам. председателя</option>
+                                            <option value="item3">ученый секретарь</option>
+                                            <option value="item4">член совета</option>
+                                        </select>
                                     </div>
                                     <div class="text-field-edit">
                                         <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
@@ -250,10 +266,6 @@
                                             <option value="item4">член совета</option>
                                         </select>
                                     </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="vfSTY804" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
-                                    </div>
                                     <div class="text-field-edit">
                                         <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
                                         <span class="edit-pencil-line-icon btn-edit"></span>
@@ -271,54 +283,6 @@
                                             <option value="item3">ученый секретарь</option>
                                             <option value="item4">член совета</option>
                                         </select>
-                                    </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="vfSTY804" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
-                                    </div>
-                                    <div class="text-field-edit">
-                                        <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
-                                        <span class="edit-pencil-line-icon btn-edit"></span>
-                                    </div>
-                                </div>
-                                <div class="sovet-field">
-                                    <div class="checkbox-field">
-                                        <input type="checkbox" class="custom-checkbox" id="happy3" checked name="happy3" value="yes">
-                                        <label for="happy3">Гогина Елена Сергеевна</label>
-                                    </div>
-                                    <div class="select-wrap __select position">
-                                        <select class="js-select" name="state">
-                                            <option value="item1">председатель</option>
-                                            <option value="item2">зам. председателя</option>
-                                            <option value="item3">ученый секретарь</option>
-                                            <option value="item4">член совета</option>
-                                        </select>
-                                    </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="vfSTY804" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
-                                    </div>
-                                    <div class="text-field-edit">
-                                        <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
-                                        <span class="edit-pencil-line-icon btn-edit"></span>
-                                    </div>
-                                </div>
-                                <div class="sovet-field">
-                                    <div class="checkbox-field">
-                                        <input type="checkbox" class="custom-checkbox" id="happy3" checked name="happy3" value="yes">
-                                        <label for="happy3">Гогина Елена Сергеевна</label>
-                                    </div>
-                                    <div class="select-wrap __select position">
-                                        <select class="js-select" name="state">
-                                            <option value="item1">председатель</option>
-                                            <option value="item2">зам. председателя</option>
-                                            <option value="item3">ученый секретарь</option>
-                                            <option value="item4">член совета</option>
-                                        </select>
-                                    </div>
-                                    <div class="text-field-copi">
-                                        <input class="text-field__input copy" value="vfSTY804" id="myInput" readonly type="text" name="sovet" placeholder="Тема">
-                                        <span class="copy-icon"></span>
                                     </div>
                                     <div class="text-field-edit">
                                         <input class="text-field__input" type="text" name="sovet" id="sovet" readonly placeholder="Тема" value="lefubileukoi-1231@yopmail.com">
@@ -332,9 +296,9 @@
                                 <input type="checkbox" class="custom-checkbox" id="happy2323" checked name="happy3" value="yes">
                                 <label for="happy2323">Анонимное голосование</label>
                             </div>
-                            <div class="link-vote">
-                                Ссылка на голосование
-                                <span class="copy-blue-icon"></span>
+                            <div class="form-footer-reset">
+                                <span>Сброс</span>
+                                <button type="reset" class="btn btn-transparent"><span class="trash-icon"></span></button>
                             </div>
                         </div>
                     </form>
@@ -353,5 +317,8 @@
     </div>
 </div>
 </body>
+<script type="text/javascript" src="js/plugins/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </html>

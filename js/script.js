@@ -1,11 +1,50 @@
 
 // Селект
+// $(document).ready(function() {
+//     $('.js-select').select2({
+//         width: 'style', // need to override the changed default
+//         minimumResultsForSearch: -1,
+//     })
+// });
+
+
+
+
 $(document).ready(function() {
+    init();
+})
+
+
+function init() {
     $('.js-select').select2({
-        width: 'style', // need to override the changed default
+        allowClear: false,
+        width: 'style',
         minimumResultsForSearch: -1,
-    })
-});
+    }).on('select2:open', function(e) {
+        $('.select2-dropdown').hide();
+        setTimeout(function() {
+            jQuery('.select2-dropdown').slideDown(150);
+        });
+    }).on('select2:closing', function(e) {
+        e.preventDefault();
+        setTimeout(function() {
+            $('.select2-dropdown').slideUp(150, function() {
+                close();
+            });
+        }, 0);
+    });
+}
+
+function close() {
+    $(".js-select").select2('destroy');
+    init();
+}
+
+
+
+
+
+
 
 
 //Раскрытие фильтра
@@ -15,15 +54,24 @@ $(document).on('click', '.filter', function() {
     return false;
 });
 
+//Закрытие фильтра
+$(document).on('click', '.close-icon', function() {
+    $(".filter").closest(".filter").toggleClass("active");
+    $('.form-filter').slideToggle(300);
+    return false;
+});
+
 
 //Раскрытие плашки из списка
-$(document).on('click', '.add-plus-circle-icon', function() {
-    $(this.closest(".accordion")).toggleClass("active");
-    var panel = this.closest(".accordion").nextElementSibling;
-    if (panel.style.maxHeight){
-        panel.style.maxHeight = null;
-    } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+$(document).on('click', '.accordion', function(e) {
+    if(!(e.target.tagName === "A")){
+        $(this).toggleClass("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
     }
 })
 
@@ -122,19 +170,19 @@ function addEl(el, name, type) {
         }, 10)
     }
 
-    if(type === 'select'){
+    if(type === 'select') {
 
         const selectDiv = document.createElement("div");
         selectDiv.className = "select";
-        selectDiv.id= "select["+(Number(index)+1)+"]";
-        selectDiv.setAttribute("data-last-index", Number(index)+1);
+        selectDiv.id = "select[" + (Number(index) + 1) + "]";
+        selectDiv.setAttribute("data-last-index", Number(index) + 1);
 
         const select = document.createElement("select");
-        select.id= nextNum;
-        select.name= nextNum;
-        select.setAttribute("data-last-index", Number(index)+1);
+        select.id = nextNum;
+        select.name = nextNum;
+        select.setAttribute("data-last-index", Number(index) + 1);
         select.setAttribute("data-placeholder", "Научные специальности");
-        select.className  = "js-select addSelStudy";
+        select.className = "js-select addSelStudy";
         const listOptions =
             [
                 "",
@@ -147,7 +195,7 @@ function addEl(el, name, type) {
 
         listSelects.push(select);
 
-        for(let i = 0; i < listOptions.length; i++) {
+        for (let i = 0; i < listOptions.length; i++) {
             const option = document.createElement("option");
             option.value = listOptions[i];
             option.text = listOptions[i];
@@ -156,19 +204,13 @@ function addEl(el, name, type) {
 
         selectDiv.append(select)
 
-        let parentGuest = document.getElementById(inputs[inputs.length-1].id);
+        let parentGuest = document.getElementById(inputs[inputs.length - 1].id);
         $(selectDiv).addClass("hidden")
         parentGuest.parentNode.insertBefore(selectDiv, parentGuest.nextSibling);
-        setTimeout(function(){
+        setTimeout(function () {
             $(selectDiv).removeClass('hidden')
         }, 10)
-
-
-        $('.js-select').select2({
-            width: 'style', // need to override the changed default
-            minimumResultsForSearch: -1,
-        })
-
+        init();
     }
 
     if(type === 'sovet-field') {
@@ -209,4 +251,11 @@ function addEl(el, name, type) {
     }
 }
 
-
+$( function() {
+    $("#date").datepicker({
+        dateFormat : "yy-mm-dd",
+        minDate: new Date($('#hiddendelivdate').val()),
+        monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+    });
+} );

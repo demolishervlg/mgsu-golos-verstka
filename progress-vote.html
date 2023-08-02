@@ -6,12 +6,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script type="text/javascript" src="js/plugins/jquery.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Московский государственный строительный университет</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
 </head>
 <body>
 <div class="all">
@@ -27,7 +25,7 @@
                     <div class="header-menu">
                         <nav class="menu">
                             <ul>
-                                <li class="btn btn-transparent active"><span class="check-all-icon active"></span>Голосования</li>
+                                <li class="btn btn-transparent active inner-page"><span class="check-all-icon active"></span>Голосования</li>
                                 <li class="btn btn-transparent"><span class="users-icon"></span> Диссертационные советы</li>
                             </ul>
                         </nav>
@@ -71,9 +69,12 @@
                <div class="form-vote">
                    <form action="" class="form">
                        <div class="text-fields">
-                           <div class="text-field">
+                           <div class="text-field date">
                                <label class="text-field__label" for="date"><span class="calendar-gray-icon"></span>Дата защиты диссертации:</label>
-                               <input class="text-field__input date" onfocusin="this.type='date'; this.readonly = 'false'" disabled onfocusout="this.type='text';  this.readonly='true'" type="text" name="date" id="date" placeholder="Дата" value="25.04.2023">
+                               <div class="date-input">
+                                   <input class="text-field__input" type="text" name="date" id="date" placeholder="Дата" value="">
+                                   <span class="calendar-icon"></span>
+                               </div>
                            </div>
                            <div class="text-field">
                                <label class="text-field__label" for="time-hour"><span class="clock-icon"></span>Время проведения защиты</label>
@@ -371,5 +372,8 @@
     </div>
 </div>
 </body>
+<script type="text/javascript" src="js/plugins/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </html>

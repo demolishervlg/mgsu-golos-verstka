@@ -114,6 +114,9 @@
         .date{
           grid-column: span 3;
           grid-row: span 1;
+          .calendar-icon{
+            pointer-events: none;
+          }
         }
 
         .fio{
@@ -264,7 +267,7 @@
           transition: 0.4s;
 
           .link{
-            color: $primary_color;
+            color: $gray-1;
             &:hover{
               color: $secondary;
               text-decoration-line: underline;
@@ -278,18 +281,18 @@
           border-bottom: 1px solid $secondary;
           background-color: $background_blue;
 
-          .link{
-            color: $secondary;
-            &:hover{
-              color: $secondary;
-              text-decoration-line: underline;
-            }
+          .add-plus-circle-icon{
+            background-image: url("/img/Add_Plus_Circle_Secondary.svg");
           }
         }
 
         .active:hover{
           background-color: #FAFBFC;
           border-bottom: 1px solid #FAFBFC;
+
+          .add-plus-circle-icon{
+            background-image: url("/img/Remove_Minus_Circle_Secondary.svg");
+          }
         }
 
         .active{

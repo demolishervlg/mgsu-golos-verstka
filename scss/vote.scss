@@ -62,8 +62,9 @@
         }
 
 
-        .date {
+        .date-input {
           grid-column: span 4;
+          position: relative;
         }
 
         .wrapper-time{
@@ -312,6 +313,7 @@
         }
 
         &.completed{
+
           .sovet-field {
             background-color: $background_red;
             &.active {
@@ -379,21 +381,20 @@
             }
           }
 
-
-          .text-field-copi {
-            .text-field__input{
-              background-color: $background_red;
-              border: 1px solid $background_red;
-            }
-          }
-
           .text-field-edit{
+            grid-column: span 4;
             .text-field__input{
               &:read-only {
                 background-color: $background_red;
                 border: 1px solid $background_red;
               }
             }
+          }
+        }
+
+        &.create{
+          .text-field-edit{
+            grid-column: span 4;
           }
         }
       }

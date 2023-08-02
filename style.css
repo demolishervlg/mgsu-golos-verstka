@@ -30,7 +30,7 @@
         max-width: 291px;
         text-align: left;
         padding: 12px 30px; }
-        .header-menu ul .btn.active:hover, .header-menu ul .btn.active:hover:hover {
+        .header-menu ul .btn.inner-page:hover, .header-menu ul .btn.inner-page:hover:hover {
           color: #ffffff;
           background-color: #005FD2;
           border-color: #005FD2; }
@@ -289,8 +289,9 @@
     display: flex;
     flex-direction: row;
     gap: 33px; }
-  .main .form-vote .form .text-field .date {
-    grid-column: span 4; }
+  .main .form-vote .form .text-field .date-input {
+    grid-column: span 4;
+    position: relative; }
   .main .form-vote .form .text-field .wrapper-time {
     display: flex;
     gap: 10px;
@@ -490,12 +491,13 @@
   .main .form-vote .form .sovet.completed .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
     background-color: #FCF7F3;
     border: 1px solid #FCF7F3; }
-  .main .form-vote .form .sovet.completed .text-field-copi .text-field__input {
-    background-color: #FCF7F3;
-    border: 1px solid #FCF7F3; }
-  .main .form-vote .form .sovet.completed .text-field-edit .text-field__input:read-only {
-    background-color: #FCF7F3;
-    border: 1px solid #FCF7F3; }
+  .main .form-vote .form .sovet.completed .text-field-edit {
+    grid-column: span 4; }
+    .main .form-vote .form .sovet.completed .text-field-edit .text-field__input:read-only {
+      background-color: #FCF7F3;
+      border: 1px solid #FCF7F3; }
+  .main .form-vote .form .sovet.create .text-field-edit {
+    grid-column: span 4; }
 
 .main .form-vote .form .form-result {
   display: flex;
@@ -718,6 +720,8 @@
       .main-inner-filter .form-filter .form .date {
         grid-column: span 3;
         grid-row: span 1; }
+        .main-inner-filter .form-filter .form .date .calendar-icon {
+          pointer-events: none; }
       .main-inner-filter .form-filter .form .fio {
         grid-column: span 4;
         grid-row: span 1; }
@@ -828,7 +832,7 @@
     cursor: pointer;
     transition: 0.4s; }
     .main-list .list-accordion .accordion-item .accordion .link {
-      color: #0F3C73; }
+      color: #57585A; }
       .main-list .list-accordion .accordion-item .accordion .link:hover {
         color: #005FD2;
         text-decoration-line: underline; }
@@ -836,14 +840,13 @@
     border-top: 1px solid #005FD2;
     border-bottom: 1px solid #005FD2;
     background-color: #F4F8FC; }
-    .main-list .list-accordion .accordion-item .accordion:hover .link {
-      color: #005FD2; }
-      .main-list .list-accordion .accordion-item .accordion:hover .link:hover {
-        color: #005FD2;
-        text-decoration-line: underline; }
+    .main-list .list-accordion .accordion-item .accordion:hover .add-plus-circle-icon {
+      background-image: url("/img/Add_Plus_Circle_Secondary.svg"); }
   .main-list .list-accordion .accordion-item .active:hover {
     background-color: #FAFBFC;
     border-bottom: 1px solid #FAFBFC; }
+    .main-list .list-accordion .accordion-item .active:hover .add-plus-circle-icon {
+      background-image: url("/img/Remove_Minus_Circle_Secondary.svg"); }
   .main-list .list-accordion .accordion-item .active {
     border-bottom: 1px solid #FAFBFC;
     background-color: #FAFBFC;
@@ -1709,14 +1712,13 @@
     border-top: 1px solid #005FD2;
     border-bottom: 1px solid #005FD2;
     background-color: #F4F8FC; }
-    .main-list-advice .list-accordion .accordion-item .accordion:hover .link {
-      color: #005FD2; }
-      .main-list-advice .list-accordion .accordion-item .accordion:hover .link:hover {
-        color: #005FD2;
-        text-decoration-line: underline; }
+    .main-list-advice .list-accordion .accordion-item .accordion:hover .add-plus-circle-icon {
+      background-image: url("/img/Add_Plus_Circle_Secondary.svg"); }
   .main-list-advice .list-accordion .accordion-item .active:hover {
     background-color: #FAFBFC;
     border-bottom: 1px solid #FAFBFC; }
+    .main-list-advice .list-accordion .accordion-item .active:hover .add-plus-circle-icon {
+      background-image: url("/img/Remove_Minus_Circle_Secondary.svg"); }
   .main-list-advice .list-accordion .accordion-item .active {
     border-bottom: 1px solid #FAFBFC;
     background-color: #FAFBFC;
@@ -1932,6 +1934,9 @@ h6, .h6 {
     .btn-transparent.active, .btn-transparent:active {
       background: #0F3C73;
       color: #ffffff; }
+      .btn-transparent.active:hover, .btn-transparent.active:hover:hover, .btn-transparent:active:hover, .btn-transparent:active:hover:hover {
+        background: #0F3C73;
+        color: #ffffff; }
     .btn-transparent.disabled, .btn-transparent:disabled {
       background: #EAEAEA;
       border-color: #EAEAEA;
@@ -2041,7 +2046,8 @@ form {
       height: 24px;
       top: 18px;
       right: 13px;
-      z-index: 100; }
+      z-index: 100;
+      pointer-events: none; }
     form .date .text-field__input[type="date"] ~ .calendar-icon {
       display: none; }
   form ::-webkit-calendar-picker-indicator {
