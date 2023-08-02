@@ -12,38 +12,16 @@ $grid-breakpoints: (
 $transition-base:all .25s ease-out !default;
 $font-family-base:'Montserrat', sans-serif;
 
-$primary_color:#0F3C73;
-$secondary:#005FD2;
-$accent:#FF9800;
-$negative:#AC1422;
-$hover-negative:#E32A3B;
-$positive:#27AE60;
-$hover-positive:#39D67B;
-$green-1:#219653;
-
-$dark:#424242;
-$gray-1:#57585A;
-$gray-2:#939598;
-$gray-3:#BCBDC0;
-$gray-4:#EAEAEA;
-$link-text: #0F3C73;
-$hover-link-text: #005FD2;
-
-$background_gray:#F5F7F9;
-$hover-background_gray:#E2EDF8;
-$background_blue:#F4F8FC;
-$background_green:#F3FCF6;
-$background_red:#FCF7F3;
-
-
 @import "scss/header";
 @import "scss/main";
 @import "scss/footer";
-@import "scss/vote";
-@import "scss/list-vote";
+//@import "scss/vote";
+//@import "scss/list-vote";
 @import "scss/icons";
-@import "scss/advice";
-@import "scss/list-advice";
+//@import "scss/advice";
+@import "scss/color";
+//@import "scss/list-advice";
+
 
 
 @mixin transition {
@@ -427,7 +405,7 @@ form{
      display: none;
     }
   }
-  
+
 
   ::-webkit-calendar-picker-indicator {
     color: transparent;

@@ -1,3 +1,5 @@
+@import "color";
+
 .main {
   &-inner-filter{
     display: grid;
@@ -47,7 +49,7 @@
         .filter-inner{
           color: $secondary;
           .filter-icon{
-            background-image: url("img/Filter.svg");
+            background-image: url("/img/Filter.svg");
           }
         }
         .filter-count{
@@ -79,7 +81,7 @@
         &:hover, &:hover:hover{
           transition: all .25s ease-out;
           .plus-icon{
-            background-image: url("img/Add_Plus.svg");
+            background-image: url("/img/Add_Plus.svg");
           }
         }
       }
@@ -180,7 +182,7 @@
                 background: $primary_color;
                 border-color: $primary_color;
                 .trash-icon{
-                  background-image: url("img/Trash_Full.svg");
+                  background-image: url("/img/Trash_Full.svg");
                 }
               }
             }

@@ -49,7 +49,7 @@ $(document).on('click', '.close-icon', function() {
 
 //Раскрытие плашки из списка
 $(document).on('click', '.accordion', function(e) {
-    if(!(e.target.tagName === "A")){
+    if(!(e.target.tagName === "A") && !(e.target.className === "copy-icon")){
         $(this).toggleClass("active");
         var panel = this.nextElementSibling;
         if (panel.style.maxHeight){
@@ -76,6 +76,7 @@ $(document).on('click', '.copy-icon', function() {
     $("body").append($temp);
     $temp.val($(copyText).text()).select();
     document.execCommand("copy");
+    $temp.remove();
 })
 
 
@@ -92,8 +93,6 @@ $(document).on('click', '.text-field-edit', function(e) {
 $(document).on('blur', '.btn-edit-input', function() {
     $(this).attr("readonly", true)
 })
-
-
 
 
 // Возможность изменять элемент по клику на поле

@@ -1,5 +1,6 @@
-.main {
+@import "color";
 
+.main {
   .new-vote-page{
     margin-top: 60px;
   }
@@ -504,7 +505,7 @@
               background: $primary_color;
               border-color: $primary_color;
               .trash-icon{
-                background-image: url("img/Trash_Full.svg");
+                background-image: url("/img/Trash_Full.svg");
               }
             }
           }
