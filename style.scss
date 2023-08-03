@@ -200,6 +200,17 @@ h6, .h6 {
     }
   }
 
+  &.positive{
+    border: 1px solid $positive ;
+    background: $positive;
+
+    &:hover, &:hover:hover {
+      background: $hover-positive;
+      border-color: $hover-positive;
+      color: #ffffff;
+    }
+  }
+
   &:hover, &:hover:hover {
     background: $secondary;
     border-color: $secondary;
@@ -373,9 +384,33 @@ form{
     font-weight: 500;
     line-height: 140%; /* 22.4px */
     transition: all .25s ease-out;
+    white-space: break-spaces;
   }
 
-  .text-field__input::placeholder {
+  .text-field__area {
+    min-height: 84px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    color: $dark;
+    background-color: $background_gray;
+    background-clip: padding-box;
+    border: 1px solid $background_gray;
+    border-radius: 4px 4px 0px 0px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+    transition: all .25s ease-out;
+    white-space: break-spaces;
+    resize: none;
+    outline: none;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .text-field__input::placeholder, .text-field__area::placeholder{
     color: $gray-3;
     font-size: 16px;
     font-style: normal;
@@ -384,7 +419,7 @@ form{
     position: relative;
   }
 
-  .text-field__input:focus {
+  .text-field__input:focus, .text-field__area:focus {
     background-color: $hover-background_gray;
     border-bottom: 1px solid $secondary;
     transition: all .25s ease-out;
@@ -508,7 +543,8 @@ form{
   .select-wrap .select2-container--default .select2-selection--single {
     border: 1px solid $background_gray;
     border-radius: 5px;
-    height: 60px;
+    height: auto;
+    min-height: 60px;
     outline: none;
   }
 
@@ -525,6 +561,8 @@ form{
     line-height: 140%;
     background-color: $background_gray;
     border-radius: 4px 4px 0 0;
+    white-space: break-spaces;
+    min-height: 60px;
   }
 
   .select-wrap .select2-container--default .select2-selection--single .select2-selection__placeholder{

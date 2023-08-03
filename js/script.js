@@ -1,17 +1,18 @@
 
-// Селект
-// $(document).ready(function() {
-//     $('.js-select').select2({
-//         width: 'style', // need to override the changed default
-//         minimumResultsForSearch: -1,
-//     })
-// });
+//Скрипт для авто подстройки высоты тега формы textarea в зависимости от вводимого внутри текста
+document.querySelectorAll('textarea').forEach(el => {
+    el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
+    el.classList.add('auto');
+    el.addEventListener('input', e => {
+        el.style.height = 'auto';
+        el.style.height = (el.scrollHeight) + 'px';
+    });
+});
 
-
+// селект
 $(document).ready(function() {
     init();
 })
-
 function init() {
     $('.js-select').select2({
         width: 'style',
@@ -24,8 +25,6 @@ function init() {
         }, 0);
     });
 }
-
-
 function close() {
     $(".js-select").select2('destroy')
     init();

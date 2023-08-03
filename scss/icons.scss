@@ -346,12 +346,31 @@
 .check-big-icon{
   display: inline-block;
   background-image: url("/img/Check_Big.svg");
+
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   transition: all .25s ease-out;
+  &.big{
+    background-image: url("/img/Check_Big_Big.svg");
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.close-md-icon{
+  display: inline-block;
+  background-image: url("/img/Close_MD.svg");
+
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+
 }
 
 .link-icon{

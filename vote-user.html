@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/scss/vote-user.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -30,19 +31,103 @@
         <main class="main">
             <div class="main-title">
                 <div class="title">
-                    <span class="check-all-icon big"></span>
-                    <h1>Голосования</h1>
-                </div>
-                <div class="log-out">
-                    <span>Выйти</span>
-                    <a href=# class="btn btn-transparent"><span class="exit-icon"></span></a>
+                    <h1>Диссертация на соискание ученой степени</h1>
                 </div>
             </div>
-            <div class="main-list">
+            <div class="main-form-user-vote">
+                <div class="title-form-user-vote">
+                    <div class="name">
+                        Шашков Алексей Андреевич
+                    </div>
+                </div>
+                <div class="form-user-vote">
+                    <form action="" class="form">
+                        <div class="text-fields">
+                            <div class="text-field date">
+                                <label class="text-field__label" for="date"><span class="calendar-gray-icon"></span>Дата защиты диссертации:</label>
+                                <div class="date-input">
+                                    <input class="text-field__input" type="text" name="date" disabled id="date" placeholder="Дата" value="2023-08-10">
+                                    <span class="calendar-icon"></span>
+                                </div>
+                            </div>
+                            <div class="text-field">
+                                <label class="text-field__label" for="time-hour"><span class="clock-icon"></span>Время проведения защиты</label>
+                                <div class="wrapper-time">
+                                    <input class="text-field__input time" type="text" name="time" id="time-hour" disabled placeholder="" value="14">
+                                    <span>:</span>
+                                    <input class="text-field__input time" type="text" name="time" id="time-min" disabled placeholder="" value="00">
+                                </div>
+                            </div>
+                            <div class="text-field">
+                                <label class="text-field__label" for="fio"><span class="user-icon"></span>Ф.И.О. соискателя</label>
+                                <input class="text-field__input fio" type="text" name="fio" id="fio" placeholder="Ф.И.О. соискателя" disabled value="Шашков Алексей Андреевич">
+                            </div>
 
+                            <div class="text-field">
+                                <label class="text-field__label" for="fio"><span class="study-icon"></span>Соискание ученой степени:</label>
+                                <div class="select-wrap study-step">
+                                    <select disabled class="js-select " data-placeholder="Соискание ученой степени" name="state">
+                                        <option></option>
+                                        <option value="item1" selected>Кандидат технических наук</option>
+                                        <option value="item2">item 2</option>
+                                        <option value="item3">item 3</option>
+                                        <option value="item4">item 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-field">
+                                <label class="text-field__label" for="theme"><span class="book-icon"></span>Тема диссертации:</label>
+                                <textarea disabled class="text-field__area theme" name="theme" id="theme">Формирование организационной структуры проекта при крупноблочном возведении АЭС Формирование организационной структуры проекта при крупноблочном возведении АЭС</textarea>
+                            </div>
+                            <div class="text-field">
+                                <label class="text-field__label" for="fio"><span class="qr-icon"></span>Шифр и наименование научной специальности:</label>
+                                <div class="select-wrap name-studSelect">
+                                    <select disabled class="js-select" data-placeholder="Шифр и наименование научной специальности" name="state">
+                                        <option></option>
+                                        <option value="item1" selected>1.14. Управление жизненным циклом объектов строительства</option>
+                                        <option value="item2">item 2</option>
+                                        <option value="item3">item 3</option>
+                                        <option value="item4">item 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-field">
+                                <label class="text-field__label" for="fio"><span class="users-gray-icon"></span>Шифр диссертационного совета:</label>
+                                <div class="select-wrap sovet">
+                                    <select disabled class="js-select" data-placeholder="Шифр диссертационного совета" name="state">
+                                        <option></option>
+                                        <option value="item1" selected>zX3qx34T</option>
+                                        <option value="item2">item 2</option>
+                                        <option value="item3">item 3</option>
+                                        <option value="item4">item 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="golos-user">
+                <div class="golos-user-text">
+                    <div class="golos-user-text-title">
+                        Голосование
+                    </div>
+                    <div class="golos-user-text-subtitle">
+                        Достоин ли Шашков Алексей Андреевич <br>
+                        присуждения учёной степени кандидата технических наук?
+                    </div>
+                </div>
+                <div class="golos-user-btns">
+                    <div class="title">
+                        Ваш голос:
+                    </div>
+                    <div class="btns">
+                        <button class="btn positive"><span class="check-big-icon big"></span>за</button>
+                        <button class="btn negative"><span class="close-md-icon"></span>против</button>
+                    </div>
+                </div>
             </div>
         </main>
-
     </div>
 </div>
 </body>

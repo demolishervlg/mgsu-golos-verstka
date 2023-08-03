@@ -531,6 +531,20 @@
   background-position: center;
   background-size: auto;
   transition: all .25s ease-out; }
+  .check-big-icon.big {
+    background-image: url("/img/Check_Big_Big.svg");
+    width: 36px;
+    height: 36px; }
+
+.close-md-icon {
+  display: inline-block;
+  background-image: url("/img/Close_MD.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out; }
 
 .link-icon {
   display: inline-block;
@@ -843,6 +857,13 @@ h6, .h6 {
       background: #E32A3B;
       border-color: #E32A3B;
       color: #ffffff; }
+  .btn.positive {
+    border: 1px solid #27AE60;
+    background: #27AE60; }
+    .btn.positive:hover, .btn.positive:hover:hover {
+      background: #39D67B;
+      border-color: #39D67B;
+      color: #ffffff; }
   .btn:hover, .btn:hover:hover {
     background: #005FD2;
     border-color: #005FD2;
@@ -966,8 +987,31 @@ form {
     font-weight: 500;
     line-height: 140%;
     /* 22.4px */
-    transition: all .25s ease-out; }
-  form .text-field__input::placeholder {
+    transition: all .25s ease-out;
+    white-space: break-spaces; }
+  form .text-field__area {
+    min-height: 84px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    color: #424242;
+    background-color: #F5F7F9;
+    background-clip: padding-box;
+    border: 1px solid #F5F7F9;
+    border-radius: 4px 4px 0px 0px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 22.4px */
+    transition: all .25s ease-out;
+    white-space: break-spaces;
+    resize: none;
+    outline: none;
+    height: auto;
+    overflow: hidden; }
+  form .text-field__input::placeholder, form .text-field__area::placeholder {
     color: #BCBDC0;
     font-size: 16px;
     font-style: normal;
@@ -975,7 +1019,7 @@ form {
     line-height: 140%;
     /* 22.4px */
     position: relative; }
-  form .text-field__input:focus {
+  form .text-field__input:focus, form .text-field__area:focus {
     background-color: #E2EDF8;
     border-bottom: 1px solid #005FD2;
     transition: all .25s ease-out; }
@@ -1055,7 +1099,8 @@ form {
   form .select-wrap .select2-container--default .select2-selection--single {
     border: 1px solid #F5F7F9;
     border-radius: 5px;
-    height: 60px;
+    height: auto;
+    min-height: 60px;
     outline: none; }
   form .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
     display: flex;
@@ -1068,7 +1113,9 @@ form {
     font-weight: 500;
     line-height: 140%;
     background-color: #F5F7F9;
-    border-radius: 4px 4px 0 0; }
+    border-radius: 4px 4px 0 0;
+    white-space: break-spaces;
+    min-height: 60px; }
   form .select-wrap .select2-container--default .select2-selection--single .select2-selection__placeholder {
     color: #BCBDC0; }
   form .select-wrap .select2-container--default .select2-selection--single .select2-selection__arrow b {
