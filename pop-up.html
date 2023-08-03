@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss/list-vote.css">
+    <link rel="stylesheet" href="scss/advice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Московский государственный строительный университет</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="js/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="scss/popups.css">
+</head>
+<body>
+<div class="all">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-inner-container">
+                    <div class="header-logo">
+                        <div class="header-logo-img">
+                            <img src="img/logo.svg" alt="МГСУ">
+                        </div>
+                    </div>
+                    <div class="header-menu">
+                        <nav class="menu">
+                            <ul>
+                                <li class="btn btn-transparent active"><span class="check-all-icon active"></span>Голосования</li>
+                                <li class="btn btn-transparent"><span class="users-icon"></span> Диссертационные советы</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-datetime">
+                    <span>Сегодня:</span>24 июля 2023 г.
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-title">
+                <div class="title">
+                    <span class="check-all-icon big"></span>
+                    <h1>Голосования</h1>
+                </div>
+                <div class="log-out">
+                    <span>Выйти</span>
+                    <a href=# class="btn btn-transparent"><span class="exit-icon"></span></a>
+                </div>
+            </div>
+            <a href="#pp-result-positive" class="popup-with-zoom btn" >Решение положительное</a>
+            <a href="#pp-result-negative" class="popup-with-zoom btn" >Решение отрицательное</a>
+        </main>
+    </div>
+</div>
+</body>
+
+<div id="pp-result-positive" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-result">
+    <div class="pp-result__inner">
+        <div class="pp-content">
+            <div class="golos">
+                <div class="golos-user-text">
+                    <div class="golos-user-text-title">
+                        Голосование
+                    </div>
+                    <div class="golos-user-text-subtitle">
+                        Достоин ли Шашков Алексей Андреевич <br>
+                        присуждения учёной степени кандидата технических наук?
+                    </div>
+                </div>
+                <div class="golos-result">
+                    <div class="title">
+                        Голосование закончилось
+                    </div>
+                    <div class="result positive">
+                        <span class="result-vote-icon positive"></span>
+                        Решение положительное
+                    </div>
+                </div>
+            </div>
+            <div class="table-result">
+                <ul class="result-list">
+                    <li>Количество голосовавших<span class="value">8 из 9</span></li>
+                    <li>За<span class="value green">8</span></li>
+                    <li>Против<span class="value red">0</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pp-result-negative" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-result">
+    <div class="pp-result__inner">
+        <div class="pp-content">
+            <div class="golos">
+                <div class="golos-user-text">
+                    <div class="golos-user-text-title">
+                        Голосование
+                    </div>
+                    <div class="golos-user-text-subtitle">
+                        Достоин ли Шашков Алексей Андреевич <br>
+                        присуждения учёной степени кандидата технических наук?
+                    </div>
+                </div>
+                <div class="golos-result">
+                    <div class="title">
+                        Голосование закончилось
+                    </div>
+                    <div class="result negative">
+                        <span class="result-vote-icon negative"></span>
+                        Решение отрицательное
+                    </div>
+                </div>
+            </div>
+            <div class="table-result">
+                <ul class="result-list">
+                    <li>Количество голосовавших<span class="value">18</span></li>
+                    <li>За<span class="value green">8</span></li>
+                    <li>Против<span class="value red">10</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/plugins/jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="js/popups.js"></script>
+</html>

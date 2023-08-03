@@ -360,10 +360,31 @@
   }
 }
 
+.result-vote-icon{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/img/Check_Big_Positive.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transition: all .25s ease-out;
+  &.positive{
+    background-image: url("/img/Check_Big_Positive.svg");
+    width: 56px;
+    height: 56px;
+  }
+
+  &.negative{
+    background-image: url("/img/Close_MD_Negative.svg");
+    width: 56px;
+    height: 56px;
+  }
+}
+
 .close-md-icon{
   display: inline-block;
   background-image: url("/img/Close_MD.svg");
-
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
