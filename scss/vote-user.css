@@ -1,0 +1,254 @@
+.all .wrapper {
+  grid-template-columns: repeat(12, minmax(60px, 80px));
+  justify-content: center;
+  background-color: #F5F7F9; }
+
+.header {
+  grid-column: span 12;
+  background-color: #F5F7F9;
+  margin: unset; }
+  .header-inner {
+    height: unset;
+    display: flex;
+    margin: unset;
+    flex-direction: row;
+    justify-content: center;
+    position: relative; }
+  .header-logo {
+    margin-top: 37px; }
+
+.main {
+  grid-column: span 12; }
+  .main-title {
+    justify-content: center; }
+    .main-title h1 {
+      text-align: center; }
+  .main-form-user-vote {
+    margin-top: 80px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.05); }
+  .main .title-form-user-vote {
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 34px 0 72px;
+    border-bottom: 2px solid #EAEAEA; }
+    .main .title-form-user-vote .name {
+      color: #424242;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; }
+    .main .title-form-user-vote .date {
+      color: #939598;
+      text-align: right;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; }
+  .main .form-user-vote .form .text-fields {
+    padding: 25px 0 0 0;
+    border-bottom: 2px solid #EAEAEA; }
+  .main .form-user-vote .form .text-field {
+    padding: 0 30px 0 17px;
+    grid-template-columns: repeat(12, minmax(58px, 80px));
+    display: grid;
+    gap: 16px;
+    align-items: center; }
+    .main .form-user-vote .form .text-field__label {
+      grid-column: span 4;
+      color: #57585A;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      display: flex;
+      flex-direction: row;
+      gap: 33px; }
+  .main .form-user-vote .form .date-input {
+    grid-column: span 6;
+    position: relative; }
+  .main .form-user-vote .form .wrapper-time {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center; }
+  .main .form-user-vote .form .time {
+    grid-column: span 3;
+    width: 66px; }
+  .main .form-user-vote .form .fio {
+    grid-column: span 6; }
+  .main .form-user-vote .form .theme {
+    grid-column: span 8; }
+  .main .form-user-vote .form .name-studSelect {
+    grid-column: span 8; }
+  .main .form-user-vote .form .sovet {
+    grid-column: span 6; }
+  .main .form-user-vote .form .study-step {
+    grid-column: span 6; }
+  .main .golos-user {
+    margin-top: 24px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.05);
+    padding: 48px 36px; }
+    .main .golos-user-text {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      color: #424242;
+      text-align: center;
+      font-style: normal;
+      font-weight: 400; }
+      .main .golos-user-text-title {
+        font-size: 32px;
+        text-transform: uppercase;
+        line-height: 120%; }
+      .main .golos-user-text-subtitle {
+        font-size: 24px;
+        line-height: 140%; }
+    .main .golos-user-btns {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px; }
+      .main .golos-user-btns .title {
+        color: #424242;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; }
+      .main .golos-user-btns .btns {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(58px, 80px));
+        gap: 16px; }
+        .main .golos-user-btns .btns .btn {
+          color: #FFF;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%;
+          text-transform: uppercase;
+          padding: 24px;
+          width: 100%;
+          justify-content: center;
+          border-radius: 64px;
+          gap: 16px; }
+        .main .golos-user-btns .btns .positive {
+          grid-column: 3/7; }
+        .main .golos-user-btns .btns .negative {
+          grid-column: 7/11; }
+
+@media (max-width: 1024px) {
+  .all .wrapper {
+    grid-template-columns: repeat(12, minmax(40px, 64px));
+    justify-content: center;
+    background-color: #F5F7F9;
+    padding-left: 40px;
+    margin-right: 40px; }
+  .main .form-user-vote .form .text-field {
+    grid-template-columns: repeat(12, minmax(40px, 60px)); }
+    .main .form-user-vote .form .text-field__label {
+      grid-column: span 5; }
+    .main .form-user-vote .form .text-field .date-input {
+      grid-column: span 7; }
+    .main .form-user-vote .form .text-field .time {
+      grid-column: span 3;
+      width: 66px; }
+    .main .form-user-vote .form .text-field .fio {
+      grid-column: span 7; }
+    .main .form-user-vote .form .text-field .theme {
+      grid-column: span 7; }
+    .main .form-user-vote .form .text-field .name-studSelect {
+      grid-column: span 7; }
+    .main .form-user-vote .form .text-field .sovet {
+      grid-column: span 7; }
+    .main .form-user-vote .form .text-field .study-step {
+      grid-column: span 7; }
+  .main .golos-user-btns .btns {
+    grid-template-columns: repeat(12, minmax(40px, 60px)); }
+    .main .golos-user-btns .btns .btn {
+      color: #FFF;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      text-transform: uppercase;
+      padding: 24px;
+      width: 100%;
+      justify-content: center;
+      border-radius: 64px;
+      gap: 16px; }
+    .main .golos-user-btns .btns .positive {
+      grid-column: 2/7; }
+    .main .golos-user-btns .btns .negative {
+      grid-column: 7/12; } }
+
+@media (max-width: 768px) {
+  .all .wrapper {
+    padding-left: 13px;
+    margin-right: 13px; } }
+
+@media (max-width: 730px) {
+  .all .wrapper {
+    grid-template-columns: repeat(4, minmax(40px, 92px));
+    justify-content: center;
+    background-color: #F5F7F9;
+    padding-left: 13px;
+    margin-right: 13px; }
+  .header {
+    grid-column: span 4; }
+  .main {
+    grid-column: span 4; }
+    .main-title .title h1 {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 120%; }
+    .main .title-form-user-vote {
+      padding: 0 27px 0 27px; }
+      .main .title-form-user-vote .name {
+        text-align: center; }
+    .main .form-user-vote .form .text-field {
+      padding: 0 13px 0 13px;
+      grid-template-columns: repeat(4, minmax(40px, 92px)); }
+      .main .form-user-vote .form .text-field__label {
+        grid-column: span 4; }
+      .main .form-user-vote .form .text-field .date-input {
+        grid-column: span 4; }
+      .main .form-user-vote .form .text-field .time {
+        grid-column: span 4;
+        width: 66px; }
+      .main .form-user-vote .form .text-field .fio {
+        grid-column: span 4; }
+      .main .form-user-vote .form .text-field .theme {
+        grid-column: span 4; }
+      .main .form-user-vote .form .text-field .name-studSelect {
+        grid-column: span 4; }
+      .main .form-user-vote .form .text-field .sovet {
+        grid-column: span 4; }
+      .main .form-user-vote .form .text-field .study-step {
+        grid-column: span 4; }
+    .main .golos-user {
+      padding: 36px 14px; }
+      .main .golos-user-btns .btns {
+        grid-template-columns: repeat(4, minmax(60px, 92px)); }
+        .main .golos-user-btns .btns .btn {
+          color: #FFF;
+          font-style: normal;
+          text-transform: uppercase;
+          padding: 24px;
+          width: 100%;
+          justify-content: center;
+          border-radius: 64px;
+          gap: 16px;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 140%; }
+        .main .golos-user-btns .btns .positive {
+          grid-column: 1/3; }
+        .main .golos-user-btns .btns .negative {
+          grid-column: 3/5; } }
