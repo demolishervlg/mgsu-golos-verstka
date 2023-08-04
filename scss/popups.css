@@ -7,6 +7,10 @@ html {
 .mfp-ready .mfp-figure {
   opacity: 0; }
 
+.mfp-container {
+  padding-left: 35px;
+  padding-right: 35px; }
+
 .mfp-zoom-in .mfp-figure, .mfp-zoom-in .mfp-iframe-holder .mfp-iframe-scaler {
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
@@ -180,6 +184,7 @@ html {
           justify-content: center;
           gap: 17px; }
           .pp-question__inner .pp-content .vote-btns .btn {
+            border-radius: 64px;
             min-width: 179px;
             justify-content: center;
             height: 84px;

@@ -400,6 +400,20 @@
 
 }
 
+.paste-icon{
+  display: inline-block;
+  background-image: url("/img/paste.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+
+  &:hover{
+    background-image: url("/img/paste_Secondary.svg");
+  }
+}
+
 .link-icon{
   display: inline-block;
   background-image: url("/img/Link.svg");

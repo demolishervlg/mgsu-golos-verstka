@@ -79,6 +79,15 @@ $(document).on('click', '.copy-icon', function() {
 })
 
 
+// вставить текст из буфера
+$(document).on('click', '.paste-icon', function(e) {
+    let input = $(this).closest(".text-field").find(".text-field__input");
+    navigator.clipboard.readText().then(text => {
+        input.val(text);
+    })
+})
+
+
 // Возможность изменять элемент по кнопке
 $(document).on('click', '.text-field-edit', function(e) {
     console.log(e.target.className)
