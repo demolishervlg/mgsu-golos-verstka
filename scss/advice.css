@@ -1,0 +1,243 @@
+.main-form-advice {
+  margin-top: 24px;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.05); }
+
+.main .title-form-advice {
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 34px 0 72px;
+  border-bottom: 2px solid #EAEAEA; }
+  .main .title-form-advice .name {
+    color: #424242;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; }
+  .main .title-form-advice .date {
+    color: #939598;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; }
+
+.main .form-advice .form .text-fields {
+  padding: 25px 30px 0 17px;
+  border-bottom: 2px solid #EAEAEA; }
+
+.main .form-advice .form .text-field {
+  grid-template-columns: repeat(9, minmax(60px, 112px));
+  display: grid;
+  transition: all .25s ease-out;
+  gap: 16px; }
+  .main .form-advice .form .text-field button.btn {
+    color: #0F3C73;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; }
+  .main .form-advice .form .text-field .input-add-minobr {
+    height: 60px;
+    transition: all .25s ease-out; }
+    .main .form-advice .form .text-field .input-add-minobr.hidden {
+      height: 0;
+      border: unset;
+      padding: 0;
+      opacity: 0; }
+  .main .form-advice .form .text-field .btn {
+    margin-bottom: 48px; }
+  .main .form-advice .form .text-field__label {
+    grid-column: span 3;
+    color: #57585A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+    height: 60px;
+    align-items: center; }
+  .main .form-advice .form .text-field .num-adv {
+    grid-column: span 4; }
+  .main .form-advice .form .text-field .minobr {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; }
+  .main .form-advice .form .text-field .select-wrap {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; }
+    .main .form-advice .form .text-field .select-wrap .select {
+      height: 60px;
+      transition: all .25s ease-out;
+      border: unset; }
+      .main .form-advice .form .text-field .select-wrap .select.hidden {
+        transition: all .25s ease-out;
+        height: 0;
+        border: unset;
+        padding: 0;
+        opacity: 0; }
+
+.main .form-advice .form .sovet {
+  border-bottom: 2px solid #EAEAEA; }
+  .main .form-advice .form .sovet-fields {
+    display: flex;
+    flex-direction: column; }
+  .main .form-advice .form .sovet .titles-sovet-fields {
+    height: 72px;
+    grid-template-columns: repeat(9, minmax(60px, 112px));
+    display: grid;
+    gap: 16px;
+    align-items: center;
+    color: #57585A;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; }
+    .main .form-advice .form .sovet .titles-sovet-fields .name-field {
+      padding-left: 74px;
+      grid-column: span 3; }
+    .main .form-advice .form .sovet .titles-sovet-fields .select-wrap {
+      padding-left: 9px;
+      grid-column: span 2; }
+    .main .form-advice .form .sovet .titles-sovet-fields .text-field-edit {
+      padding-right: 66px;
+      text-align: right;
+      grid-column: span 4; }
+  .main .form-advice .form .sovet-field {
+    color: #BCBDC0;
+    padding: 0 30px 0 17px;
+    grid-template-columns: repeat(9, minmax(60px, 112px));
+    display: grid;
+    gap: 16px;
+    align-items: center;
+    border-top: 1px solid #EAEAEA;
+    transition: all .25s ease-out;
+    height: 49px; }
+    .main .form-advice .form .sovet-field.hidden {
+      height: 0;
+      border: unset;
+      padding: 0;
+      opacity: 0; }
+    .main .form-advice .form .sovet-field .name-field {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      grid-column: span 3; }
+      .main .form-advice .form .sovet-field .name-field .text-field__input {
+        padding-right: 36px;
+        color: #424242;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        transition: all .25s ease-out;
+        border-bottom: 1px solid #0F3C73;
+        height: 48px;
+        padding: unset; }
+        .main .form-advice .form .sovet-field .name-field .text-field__input:read-only {
+          height: 48px;
+          background-color: #ffffff;
+          border: 1px solid #ffffff; }
+      .main .form-advice .form .sovet-field .name-field .delete-sovet {
+        display: flex;
+        align-items: center;
+        margin-right: 33px; }
+    .main .form-advice .form .sovet-field .select-wrap {
+      transition: all .25s ease-out;
+      grid-column: span 2; }
+      .main .form-advice .form .sovet-field .select-wrap .select2-container--default .select2-selection--single {
+        transition: all .25s ease-out;
+        height: 48px;
+        color: #424242;
+        background-color: #ffffff;
+        border: unset; }
+      .main .form-advice .form .sovet-field .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+        transition: all .25s ease-out;
+        color: #424242;
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 6px 6px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        border-radius: 4px 4px 0 0; }
+      .main .form-advice .form .sovet-field .select-wrap .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        top: 50%;
+        right: 5px; }
+    .main .form-advice .form .sovet-field .text-field-edit {
+      height: 48px;
+      grid-column: span 4;
+      position: relative; }
+      .main .form-advice .form .sovet-field .text-field-edit .text-field__input {
+        padding-right: 36px;
+        color: #57585A;
+        text-align: right;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        border-bottom: 1px solid #0F3C73;
+        height: 48px; }
+        .main .form-advice .form .sovet-field .text-field-edit .text-field__input:read-only {
+          height: 48px;
+          background-color: #ffffff;
+          border: 1px solid #ffffff; }
+      .main .form-advice .form .sovet-field .text-field-edit .btn-edit {
+        position: absolute;
+        top: 12px;
+        right: 0; }
+  .main .form-advice .form .sovet .btns {
+    border-top: 1px solid #EAEAEA;
+    padding: 12px 5px; }
+    .main .form-advice .form .sovet .btns .btn {
+      padding: 5px 15px 5px 7px; }
+
+.main .form-advice .form button.btn {
+  color: #0F3C73;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; }
+
+.main .form-advice .form .form-footer {
+  padding: 35px 30px 35px 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .main .form-advice .form .form-footer .text-field {
+    margin-bottom: unset; }
+    .main .form-advice .form .form-footer .text-field .text-field__label {
+      grid-column: span 3; }
+    .main .form-advice .form .form-footer .text-field .text-field__input {
+      grid-column: span 6; }
+
+.main-form-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 24px; }
+  .main-form-btns .btn {
+    width: 100%;
+    max-width: 367px;
+    height: 60px;
+    justify-content: center; }
+    .main-form-btns .btn:hover .document-pdf-icon {
+      background-image: url("/img/grommet-icons_document-pdf-white.svg"); }
