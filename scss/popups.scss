@@ -19,6 +19,9 @@ html {
     -ms-transform: scale(0.95);
     transform: scale(0.95);
 }
+.mfp-zoom-in.mfp-bg{
+	background: #0F3C7340;
+}
 .mfp-zoom-in.mfp-bg,
 .mfp-zoom-in .mfp-preloader {
   opacity: 0;
@@ -33,7 +36,7 @@ html {
 }
 .mfp-bg,.mfp-zoom-in.mfp-ready.mfp-bg,
 .mfp-zoom-in.mfp-ready .mfp-preloader {
-    opacity: 0.7;
+    opacity: 1;
 }
 .mfp-zoom-in.mfp-removing .mfp-figure, .mfp-zoom-in.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler{
     -webkit-transform: scale(0.95);
@@ -134,6 +137,91 @@ html {
 	}
 }
 
+.pp-golos-vote{
+	margin: auto;
+	width: 100%;
+	max-width: 624px;
+	&__inner {
+		position: relative;
+
+		.pp-content {
+			position: relative;
+			background: #FFFFFF;
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+			border-radius: 8px;
+			overflow: hidden;
+			width: 100%;
+
+			.golos-vote {
+				padding: 93px 20px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				 gap: 40px;
+				&-img {
+
+				}
+				&-text {
+					color: $dark;
+					text-align: center;
+					font-size: 32px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 120%;
+				}
+			}
+		}
+	}
+}
+
+.pp-question{
+	margin: auto;
+	width: 100%;
+	max-width: 1000px;
+	&__inner {
+		position: relative;
+		.pp-content {
+			position:relative;
+			background: #FFFFFF;
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+			border-radius: 8px;
+			overflow: hidden;
+			width: 100%;
+
+			.vote{
+				padding: 119px 128px;
+				&-text{
+					color: $dark;
+					text-align: center;
+					font-size: 32px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+					text-transform: uppercase;
+				}
+				&-btns{
+					margin-top: 80px;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					gap: 17px;
+					.btn{
+						min-width: 179px;
+						justify-content: center;
+						height: 84px;
+						font-size: 24px;
+						font-style: normal;
+						font-weight: 600;
+						line-height: 120%;
+					}
+				}
+			}
+
+		}
+	}
+}
+
 .pp-result{
 	margin: auto;
 	width: 100%;
@@ -143,8 +231,7 @@ html {
 		.pp-content{
 			position:relative;
 			background: #FFFFFF;
-			border: 1px solid #B3C8DB;
-			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+			box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.05);
 			border-radius: 8px;
 			overflow: hidden;
 			width: 100%;
@@ -193,6 +280,9 @@ html {
 						}
 						&.negative{
 							color: $negative;
+						}
+						&.empty{
+							color: $gray-1;
 						}
 					}
 				}

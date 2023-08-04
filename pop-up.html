@@ -51,10 +51,27 @@
                     <a href=# class="btn btn-transparent"><span class="exit-icon"></span></a>
                 </div>
             </div>
+            <br>
+            <br>
             <a href="#pp-result-positive" class="popup-with-zoom btn" >Решение положительное</a>
             <br>
             <br>
             <a href="#pp-result-negative" class="popup-with-zoom btn" >Решение отрицательное</a>
+            <br>
+            <br>
+            <a href="#pp-result-empty" class="popup-with-zoom btn" >Решение не принято</a>
+            <br>
+            <br>
+            <a href="#pp-question-start" class="popup-with-zoom btn" >Вы хотите Начать Голосование ?</a>
+            <br>
+            <br>
+            <a href="#pp-question-invite" class="popup-with-zoom btn" >Разослать приглашения участникам голосования?</a>
+            <br>
+            <br>
+            <a href="#pp-question-remove" class="popup-with-zoom btn" >вы хотите удалить Голосование ?</a>
+            <br>
+            <br>
+            <a href="#pp-question-golos-vote" class="popup-with-zoom btn" >Спасибо, ваш голос учтен!</a>
         </main>
     </div>
 </div>
@@ -127,6 +144,105 @@
         </div>
     </div>
 </div>
+
+<div id="pp-result-empty" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-result">
+    <div class="pp-result__inner">
+        <div class="pp-content">
+            <div class="golos">
+                <div class="golos-user-text">
+                    <div class="golos-user-text-title">
+                        Голосование
+                    </div>
+                    <div class="golos-user-text-subtitle">
+                        Достоин ли Шашков Алексей Андреевич <br>
+                        присуждения учёной степени кандидата технических наук?
+                    </div>
+                </div>
+                <div class="golos-result">
+                    <div class="title">
+                        Голосование закончилось
+                    </div>
+                    <div class="result empty">
+                        <span class="result-vote-icon empty"></span>
+                        Решение не принято
+                    </div>
+                </div>
+            </div>
+            <div class="table-result">
+                <ul class="result-list">
+                    <li>Количество голосовавших<span class="value">18</span></li>
+                    <li>За<span class="value green">8</span></li>
+                    <li>Против<span class="value red">10</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pp-question-start" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-question">
+    <div class="pp-question__inner">
+        <div class="pp-content">
+            <div class="vote">
+                <div class="vote-text">
+                    вы хотите Начать Голосование ?
+                </div>
+                <div class="vote-btns">
+                    <a href="#" class="btn positive">Да</a>
+                    <a href="#" class="btn">Нет</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pp-question-invite" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-question">
+    <div class="pp-question__inner">
+        <div class="pp-content">
+            <div class="vote">
+                <div class="vote-text">
+                    Разослать приглашения участникам голосования?
+                </div>
+                <div class="vote-btns">
+                    <a href="#" class="btn positive">Да</a>
+                    <a href="#" class="btn">Нет</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pp-question-remove" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-question">
+    <div class="pp-question__inner">
+        <div class="pp-content">
+            <div class="vote">
+                <div class="vote-text">
+                    вы хотите удалить Голосование ?
+                </div>
+                <div class="vote-btns">
+                    <a href="#" class="btn negative">Да</a>
+                    <a href="#" class="btn">Нет</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pp-question-golos-vote" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-golos-vote">
+    <div class="pp-golos-vote__inner">
+        <div class="pp-content">
+            <div class="golos-vote">
+                <div class="golos-vote-img">
+                    <img src="img/logo.svg">
+                </div>
+                <div class="golos-vote-text">
+                    Спасибо, ваш голос учтен!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script type="text/javascript" src="js/plugins/jquery.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>

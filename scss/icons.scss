@@ -380,6 +380,12 @@
     width: 56px;
     height: 56px;
   }
+
+  &.empty{
+    background-image: url("/img/empty_LG.svg");
+    width: 56px;
+    height: 56px;
+  }
 }
 
 .close-md-icon{
