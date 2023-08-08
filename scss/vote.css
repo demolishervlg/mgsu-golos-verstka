@@ -73,193 +73,207 @@
   .main .form-vote .form .text-field .sovet {
     grid-column: span 4; }
 
-.main .form-vote .form .sovet {
-  border-bottom: 2px solid #EAEAEA; }
-  .main .form-vote .form .sovet-fields {
+.main .form-vote .form .sovet-fields {
+  display: flex;
+  flex-direction: column; }
+
+.main .form-vote .form .sovet .titles-sovet-fields {
+  height: 72px;
+  grid-template-columns: repeat(9, minmax(60px, 112px));
+  display: grid;
+  gap: 16px;
+  align-items: center;
+  color: #57585A;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; }
+  .main .form-vote .form .sovet .titles-sovet-fields .checkbox-field {
+    padding-left: 74px;
+    grid-column: span 3; }
+  .main .form-vote .form .sovet .titles-sovet-fields .__select-field {
+    padding-left: 9px;
+    grid-column: span 2; }
+  .main .form-vote .form .sovet .titles-sovet-fields .text-field-copy {
+    grid-column: span 1; }
+  .main .form-vote .form .sovet .titles-sovet-fields .text-field-edit {
+    padding-right: 66px;
+    text-align: right;
+    grid-column: span 3; }
+
+.main .form-vote .form .sovet-field {
+  color: #BCBDC0;
+  padding: 0 30px 0 17px;
+  grid-template-columns: repeat(9, minmax(60px, 112px));
+  display: grid;
+  gap: 16px;
+  align-items: center;
+  border-top: 1px solid #EAEAEA; }
+  .main .form-vote .form .sovet-field .checkbox-field {
+    height: 100%;
     display: flex;
-    flex-direction: column; }
-  .main .form-vote .form .sovet .titles-sovet-fields {
-    height: 72px;
-    grid-template-columns: repeat(9, minmax(60px, 112px));
-    display: grid;
-    gap: 16px;
+    flex-direction: row;
     align-items: center;
-    color: #57585A;
-    font-size: 14px;
+    grid-column: span 3;
+    color: #424242;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 140%; }
-    .main .form-vote .form .sovet .titles-sovet-fields .checkbox-field {
-      padding-left: 74px;
-      grid-column: span 3; }
-    .main .form-vote .form .sovet .titles-sovet-fields .__select-field {
-      padding-left: 9px;
-      grid-column: span 2; }
-    .main .form-vote .form .sovet .titles-sovet-fields .text-field-copy {
-      grid-column: span 1; }
-    .main .form-vote .form .sovet .titles-sovet-fields .text-field-edit {
-      padding-right: 66px;
-      text-align: right;
-      grid-column: span 3; }
-  .main .form-vote .form .sovet-field {
-    color: #BCBDC0;
-    padding: 0 30px 0 17px;
-    grid-template-columns: repeat(9, minmax(60px, 112px));
-    display: grid;
-    gap: 16px;
-    align-items: center;
-    border-top: 1px solid #EAEAEA; }
-    .main .form-vote .form .sovet-field .checkbox-field {
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      grid-column: span 3;
+    .main .form-vote .form .sovet-field .checkbox-field .name {
+      margin-left: 33px; }
+    .main .form-vote .form .sovet-field .checkbox-field .custom-checkbox + label::before {
+      color: #BCBDC0; }
+    .main .form-vote .form .sovet-field .checkbox-field .custom-checkbox + label {
+      color: #BCBDC0; }
+    .main .form-vote .form .sovet-field .checkbox-field .custom-checkbox:checked + label {
+      color: #57585A; }
+  .main .form-vote .form .sovet-field .select-wrap {
+    grid-column: span 2; }
+    .main .form-vote .form .sovet-field .select-wrap .select2-container--default .select2-selection--single {
+      height: 48px;
       color: #424242;
+      background-color: #ffffff;
+      border: unset; }
+    .main .form-vote .form .sovet-field .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+      color: #424242;
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 6px 6px;
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
-      line-height: 140%; }
-      .main .form-vote .form .sovet-field .checkbox-field .name {
-        margin-left: 33px; }
-      .main .form-vote .form .sovet-field .checkbox-field .custom-checkbox + label::before {
-        color: #BCBDC0; }
-      .main .form-vote .form .sovet-field .checkbox-field .custom-checkbox + label {
-        color: #BCBDC0; }
-      .main .form-vote .form .sovet-field .checkbox-field .custom-checkbox:checked + label {
-        color: #57585A; }
-    .main .form-vote .form .sovet-field .select-wrap {
-      grid-column: span 2; }
-      .main .form-vote .form .sovet-field .select-wrap .select2-container--default .select2-selection--single {
-        height: 48px;
-        color: #424242;
-        background-color: #ffffff;
-        border: unset; }
-      .main .form-vote .form .sovet-field .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
-        color: #424242;
-        background-color: #ffffff;
-        border: 1px solid #ffffff;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding: 6px 6px;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        border-radius: 4px 4px 0 0; }
-      .main .form-vote .form .sovet-field .select-wrap .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        top: 50%;
-        right: 5px; }
-    .main .form-vote .form .sovet-field .text-field-copi {
+      line-height: 140%;
+      border-radius: 4px 4px 0 0; }
+    .main .form-vote .form .sovet-field .select-wrap .select2-container--default .select2-selection--single .select2-selection__arrow b {
+      top: 50%;
+      right: 5px; }
+  .main .form-vote .form .sovet-field .text-field-copi {
+    height: 24px;
+    grid-column: span 1;
+    position: relative; }
+    .main .form-vote .form .sovet-field .text-field-copi .text-field__input {
+      color: #57585A;
+      padding: unset;
       height: 24px;
-      grid-column: span 1;
-      position: relative; }
-      .main .form-vote .form .sovet-field .text-field-copi .text-field__input {
-        color: #57585A;
-        padding: unset;
-        height: 24px;
+      background-color: #ffffff;
+      border: 1px solid #ffffff; }
+    .main .form-vote .form .sovet-field .text-field-copi .copy-icon {
+      position: absolute;
+      top: 0;
+      right: -15px; }
+  .main .form-vote .form .sovet-field .text-field-edit {
+    height: 48px;
+    grid-column: span 3;
+    position: relative; }
+    .main .form-vote .form .sovet-field .text-field-edit .text-field__input {
+      padding-right: 36px;
+      color: #57585A;
+      text-align: right;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
+      border-bottom: 1px solid #0F3C73;
+      height: 48px; }
+      .main .form-vote .form .sovet-field .text-field-edit .text-field__input:read-only {
+        height: 48px;
         background-color: #ffffff;
         border: 1px solid #ffffff; }
-      .main .form-vote .form .sovet-field .text-field-copi .copy-icon {
-        position: absolute;
-        top: 0;
-        right: -15px; }
-    .main .form-vote .form .sovet-field .text-field-edit {
-      height: 48px;
-      grid-column: span 3;
-      position: relative; }
-      .main .form-vote .form .sovet-field .text-field-edit .text-field__input {
-        padding-right: 36px;
-        color: #57585A;
-        text-align: right;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        background-color: #ffffff;
-        border: 1px solid #ffffff;
-        border-bottom: 1px solid #0F3C73;
-        height: 48px; }
-        .main .form-vote .form .sovet-field .text-field-edit .text-field__input:read-only {
-          height: 48px;
-          background-color: #ffffff;
-          border: 1px solid #ffffff; }
-      .main .form-vote .form .sovet-field .text-field-edit .btn-edit {
-        position: absolute;
-        top: 12px;
-        right: 0; }
-  .main .form-vote .form .sovet.progress .sovet-field.active {
-    background-color: #F3FCF6; }
-    .main .form-vote .form .sovet.progress .sovet-field.active .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
-      background-color: #F3FCF6;
-      border: 1px solid #F3FCF6; }
-    .main .form-vote .form .sovet.progress .sovet-field.active .text-field-copi .text-field__input {
-      background-color: #F3FCF6 !important; }
-    .main .form-vote .form .sovet.progress .sovet-field.active .text-field-edit .text-field__input:read-only {
-      background-color: #F3FCF6 !important;
-      border: 1px solid #F3FCF6 !important; }
-  .main .form-vote .form .sovet.progress .checkbox-field .custom-checkbox + label {
-    color: #57585A; }
-  .main .form-vote .form .sovet.progress .checkbox-field .custom-checkbox + label::before {
-    width: 24px;
-    height: 24px;
-    border: unset;
-    background-size: 100%;
-    background-color: #ffffff;
-    background-image: url("/img/Remove_Minus.svg"); }
-  .main .form-vote .form .sovet.progress .checkbox-field .custom-checkbox:checked + label::before {
-    transition: all .15s ease-out;
-    border-color: #0F3C73;
+    .main .form-vote .form .sovet-field .text-field-edit .btn-edit {
+      position: absolute;
+      top: 12px;
+      right: 0; }
+
+.main .form-vote .form .sovet.progress .sovet-field.active {
+  background-color: #F3FCF6; }
+  .main .form-vote .form .sovet.progress .sovet-field.active .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
     background-color: #F3FCF6;
-    background-image: url("/img/chekbox-green-progress.svg");
-    color: #57585A; }
-  .main .form-vote .form .sovet.progress .select-wrap .select2-container--default .select2-selection--single {
-    background-color: #F3FCF6; }
-  .main .form-vote .form .sovet.completed .sovet-field {
-    background-color: #FCF7F3; }
-    .main .form-vote .form .sovet.completed .sovet-field.active {
-      background-color: #ffffff; }
-      .main .form-vote .form .sovet.completed .sovet-field.active .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
-        background-color: #ffffff;
-        border: 1px solid #ffffff; }
-      .main .form-vote .form .sovet.completed .sovet-field.active .text-field-copi .text-field__input {
-        background-color: #ffffff !important;
-        border: 1px solid #ffffff !important; }
-      .main .form-vote .form .sovet.completed .sovet-field.active .text-field-edit .text-field__input:read-only {
-        background-color: #ffffff !important;
-        border: 1px solid #ffffff !important; }
-  .main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox + label {
-    background-color: #FCF7F3; }
-  .main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox + label::before {
-    width: 24px;
-    height: 24px;
-    border: unset;
-    background-size: 100%;
-    background-image: url("/img/Remove_Minus.svg"); }
-  .main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox:checked + label {
-    color: #57585A;
+    border: 1px solid #F3FCF6; }
+  .main .form-vote .form .sovet.progress .sovet-field.active .text-field-copi .text-field__input {
+    background-color: #F3FCF6 !important; }
+  .main .form-vote .form .sovet.progress .sovet-field.active .text-field-edit .text-field__input:read-only {
+    background-color: #F3FCF6 !important;
+    border: 1px solid #F3FCF6 !important; }
+
+.main .form-vote .form .sovet.progress .checkbox-field .custom-checkbox + label {
+  color: #57585A; }
+
+.main .form-vote .form .sovet.progress .checkbox-field .custom-checkbox + label::before {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-size: 100%;
+  background-color: #ffffff;
+  background-image: url("/img/Remove_Minus.svg"); }
+
+.main .form-vote .form .sovet.progress .checkbox-field .custom-checkbox:checked + label::before {
+  transition: all .15s ease-out;
+  border-color: #0F3C73;
+  background-color: #F3FCF6;
+  background-image: url("/img/chekbox-green-progress.svg");
+  color: #57585A; }
+
+.main .form-vote .form .sovet.progress .select-wrap .select2-container--default .select2-selection--single {
+  background-color: #F3FCF6; }
+
+.main .form-vote .form .sovet.completed .sovet-field {
+  background-color: #FCF7F3; }
+  .main .form-vote .form .sovet.completed .sovet-field.active {
     background-color: #ffffff; }
-  .main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox:not(:checked):disabled + label::before {
-    border-color: unset;
-    background-color: unset; }
-  .main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox:checked + label::before {
-    transition: all .15s ease-out;
-    border-color: #0F3C73;
-    background-color: #ffffff;
-    background-image: url("/img/chekbox-green-progress.svg");
-    color: #57585A; }
-  .main .form-vote .form .sovet.completed .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+    .main .form-vote .form .sovet.completed .sovet-field.active .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+      background-color: #ffffff;
+      border: 1px solid #ffffff; }
+    .main .form-vote .form .sovet.completed .sovet-field.active .text-field-copi .text-field__input {
+      background-color: #ffffff !important;
+      border: 1px solid #ffffff !important; }
+    .main .form-vote .form .sovet.completed .sovet-field.active .text-field-edit .text-field__input:read-only {
+      background-color: #ffffff !important;
+      border: 1px solid #ffffff !important; }
+
+.main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox + label {
+  background-color: #FCF7F3; }
+
+.main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox + label::before {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-size: 100%;
+  background-image: url("/img/Remove_Minus.svg"); }
+
+.main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox:checked + label {
+  color: #57585A;
+  background-color: #ffffff; }
+
+.main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox:not(:checked):disabled + label::before {
+  border-color: unset;
+  background-color: unset; }
+
+.main .form-vote .form .sovet.completed .checkbox-field .custom-checkbox:checked + label::before {
+  transition: all .15s ease-out;
+  border-color: #0F3C73;
+  background-color: #ffffff;
+  background-image: url("/img/chekbox-green-progress.svg");
+  color: #57585A; }
+
+.main .form-vote .form .sovet.completed .select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+  background-color: #FCF7F3;
+  border: 1px solid #FCF7F3; }
+
+.main .form-vote .form .sovet.completed .text-field-edit {
+  grid-column: span 4; }
+  .main .form-vote .form .sovet.completed .text-field-edit .text-field__input:read-only {
     background-color: #FCF7F3;
     border: 1px solid #FCF7F3; }
-  .main .form-vote .form .sovet.completed .text-field-edit {
-    grid-column: span 4; }
-    .main .form-vote .form .sovet.completed .text-field-edit .text-field__input:read-only {
-      background-color: #FCF7F3;
-      border: 1px solid #FCF7F3; }
-  .main .form-vote .form .sovet.create .text-field-edit {
-    grid-column: span 4; }
+
+.main .form-vote .form .sovet.create .text-field-edit {
+  grid-column: span 4; }
 
 .main .form-vote .form .form-result {
   display: flex;

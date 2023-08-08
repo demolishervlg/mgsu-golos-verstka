@@ -13,14 +13,16 @@ document.querySelectorAll('textarea').forEach(el => {
 $(document).ready(function() {
     init();
 })
+
 function init() {
     $('.js-select').select2({
         width: 'style',
         minimumResultsForSearch: -1,
+        dropdownPosition: 'below'
     }).on('select2:open', function(e) {
         $('.select2-dropdown').hide();
         setTimeout(function() {
-            jQuery('.select2-dropdown').slideDown(150);
+            jQuery('.select2-dropdown').fadeIn(150);
             const evt = "scroll.select2";
         }, 0);
     });
@@ -246,6 +248,7 @@ function addEl(el, name, type) {
         $('.js-select').select2({
             width: 'style', // need to override the changed default
             minimumResultsForSearch: -1,
+            dropdownPosition: 'below'
         })
 
     }
